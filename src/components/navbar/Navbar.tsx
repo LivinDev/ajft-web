@@ -36,21 +36,21 @@ const Navbar = () => {
           <li className={Style.dropdown}>
             <Link to="/event"> EVENTS</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/"> VISION</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/volunteer"> GET INVOLVED</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/"> FOUNDATION 2019</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact"> CONTACT US</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/"> NSE</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

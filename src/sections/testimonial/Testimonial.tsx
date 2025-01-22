@@ -2,9 +2,6 @@
 import Style from './testimonial.module.css';
 import Profile from '../../assets/images/bg-2.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/autoplay';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 export interface Testimonial {

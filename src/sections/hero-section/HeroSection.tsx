@@ -1,10 +1,7 @@
 
 import Style from './style.module.css';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/autoplay';
+
 
 import { Autoplay, Pagination } from 'swiper/modules';
 
