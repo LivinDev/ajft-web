@@ -1,0 +1,43 @@
+.hero-section{
+    width: 100%;
+    
+}
+.item{
+    height: 80vh;
+    width: 100%;
+   background-image: url(../../assets/images/bg-1.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.item2{
+    height: 80vh;
+    width: 100%;
+background-image: url(../../assets/images/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.item3{
+    height: 80vh;
+    width: 100%;
+background-image: url(../../assets/images/bg-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.item4{
+    height: 80vh;
+    width: 100%;
+    background-image: url(../../assets/images/bg-4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+.swiper-pagination-bullet {
+    background: #adadad;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff;
+}

@@ -1,0 +1,106 @@
+.navbar {
+  background-color: rgba(21, 21, 133, 0.816);
+  padding: 10px 20px;
+  /* Added horizontal padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Added shadow for depth */
+}
+
+.innernavbar {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* Aligns items to the edges */
+  align-items: center;
+  /* Vertically centers items */
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist li {
+  position: relative;
+}
+
+.navlist a {
+  text-decoration: none;
+  color: white;
+  padding: .5rem 1rem;
+  /* Increased padding for better touch target size */
+  display: block;
+  font-size: .8rem;
+  /* Increased font size for better readability */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.navlist a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Subtle hover effect */
+}
+
+.navlist .dropdown:hover .dropdownmenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 100;
+}
+
+.dropdownmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(21, 21, 133, 1);;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  min-width: 200px;
+  /* Ensures dropdown is not too narrow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Added shadow for depth */
+}
+
+.dropdownmenu li {
+  width: 100%;
+  /* Full width for dropdown items */
+}
+
+.dropdownmenu a {
+  padding: 1rem;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Lighter border for better contrast */
+}
+
+.dropdownmenu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Consistent hover effect */
+}
+
+
+
+
+.bannercontainer {
+  background: linear-gradient(135deg, #f41212, #e83f53); 
+  padding: 10px 40px; 
+  text-align: center; 
+  border-bottom: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.bannerheading {
+  color: white; 
+  font-size: 1em; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  margin: 0;
+  font-family: 'Arial', sans-serif; 
+}

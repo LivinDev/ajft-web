@@ -1,0 +1,27 @@
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: darken(#007bff, 10%);
+        transform: scale(1.05);
+    }
+
+    &.small {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    &.medium {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    &.large {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}

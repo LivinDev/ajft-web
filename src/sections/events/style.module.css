@@ -1,0 +1,27 @@
+.eventcontainer{
+    
+}
+.eventsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+
+}
+.eventmainsection{
+  max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.sectiontitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width:800px){
+    .eventsection {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+}

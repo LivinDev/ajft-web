@@ -1,0 +1,41 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.cardSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.accountInfo {
+    margin-bottom: 20px;
+}
+
+.details {
+    text-align: left;
+}

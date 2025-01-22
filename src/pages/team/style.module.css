@@ -1,0 +1,46 @@
+.innerteamsection{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem  1rem;
+
+}
+.teamcontainer
+{}
+.imgsection{
+    width: 100%;
+    height: fit-content;
+    
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
+.teamcard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; 
+    padding: 16px;
+}
+.teamheading{
+    font-size: 2rem;
+    color: white;
+    padding: 2rem 0;
+}
+.teamcardcontainer{
+    padding: 3rem 0;
+    background-color: rgb(36, 9, 81);
+    
+}
+.teamdescription{
+    padding: 2rem .5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 32px;
+}
+.innersectionofteam{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1ren;
+}

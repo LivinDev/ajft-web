@@ -1,0 +1,59 @@
+.donateSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.sectionTitle {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.impactContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.impactItem {
+    flex: 1 1 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    p {
+        padding: 20px;
+        font-size: 1.1em;
+        color: #555;
+    }
+}
+
+.impactImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.donateButton {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}

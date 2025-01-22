@@ -1,0 +1,52 @@
+.eventPageContainer {
+ 
+
+}
+
+.eventPageHeader {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+}
+
+.eventPageHeaderInner {
+    position: relative;
+    z-index: 2;
+}
+
+.eventPageEventTitle {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.eventPageEventMetadata {
+    font-size: 1.2em;
+}
+
+.eventPageEventSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.eventCard {
+    margin: 10px;
+    flex: 1 1 200px;
+}

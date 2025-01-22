@@ -1,0 +1,62 @@
+.donationCard {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: transform 0.2s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+}
+
+.donationCard:hover {
+    transform: scale(1.05);
+
+}
+
+.cardTop {
+    height: 200px;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBottom {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardTitle {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.cardDescription {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.cardButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cardButton:hover {
+    background-color: #0056b3;
+}

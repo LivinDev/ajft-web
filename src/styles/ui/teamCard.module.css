@@ -1,0 +1,48 @@
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 300px;
+    margin: 0 auto;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.photo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.name {
+    font-size: 1.5em;
+    margin: 8px 0;
+    color: #333;
+}
+
+.position {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.socialMedia {
+    margin-top: 16px;
+
+    a {
+        color: #1da1f2;
+        margin: 0 8px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #0d8ddb;
+        }
+    }
+}

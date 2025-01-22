@@ -1,0 +1,39 @@
+.volunsoutersection {
+  background-color: #f4f4f4;
+  padding: 5rem 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volunsinnersection {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.subheading {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}

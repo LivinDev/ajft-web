@@ -1,0 +1,77 @@
+.eventcontainer {
+    font-family: Arial, sans-serif;
+}
+
+.eventsection {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: rgb(8, 49, 91);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerinner {
+    text-align: center;
+}
+
+.eventmetedata {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.eventtitle {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.location,
+.date {
+    font-size: 1.2rem;
+}
+
+.eventImage {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+}
+
+.aboutevent {
+    text-align: center;
+}
+
+.aboutdetails {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.eventdescription,
+.moreText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.moreText {
+    margin-top: 1rem;
+}
