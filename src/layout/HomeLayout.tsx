@@ -1,9 +1,7 @@
 // PublicLayout.tsx
 
-import TopBanner from '../components/navbar/TopBanner';
 import LogoSection from '../components/navbar/LogoSection';
 import Navbar from '../components/navbar/Navbar';
-import MarqueeText from '../components/marqueeText/MarqueeText';
 import SocialIcons from '../components/socialBar/SocialIcons';
 import EventsBar from '../components/eventsBar/EventsBar';
 import Footer from '../components/footer/Footer';
