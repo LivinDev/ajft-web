@@ -1,5 +1,5 @@
 import Styles from './style.module.css';
-import FounderIMAGE from '../../assets/images/founder.jpg';
+import FounderIMAGE from '../../assets/images/founder.png';
 const AboutPage = () => {
   return (
     <div className={Styles.aboutcontainer}>

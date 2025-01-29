@@ -15,15 +15,15 @@ interface PublicLayoutProps {
 const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
   return (
     <>
-      <TopBanner />
+      {/* <TopBanner /> */}
       <LogoSection />
       <Navbar />
-      <MarqueeText>
+      {/* <MarqueeText>
         <h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
           itaque.
         </h1>
-      </MarqueeText>
+      </MarqueeText> */}
       <SocialIcons />
       {children}
       <EventsBar />

@@ -1,37 +1,77 @@
+/* style.css */
 .outer-container {
     background-color: #3F0C85;
-    height: fit-content;
+    background-image: radial-gradient(circle at 50% 50%, #4B1491 0%, #3F0C85 100%);
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+}
 
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .inner-container {
     max-width: 1300px;
     margin: 0 auto;
     color: white;
-    padding: 4rem 0;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
+    gap: 4rem;
+}
+
+.title-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    display: inline-block;
+    color: #FFD700;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
+    background: linear-gradient(to right, #ffffff, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .impact-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -39,42 +79,124 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.heading {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #FFD700, transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.impact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.icon-wrapper {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.impact-icon {
+    width: 32px;
+    height: 32px;
+    color: #FFD700;
 }
 
 .num {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 800;
     color: #FFD700;
+    line-height: 1;
+    margin: 0;
+}
+
+.heading {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    color: white;
 }
 
 .description {
     font-size: 1rem;
     text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.6;
 }
 
-@media (max-width:800px){
-    .impact-section{
-        display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 1rem;
+@media (max-width: 1200px) {
+    .impact-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 768px) {
+    .outer-container {
+        padding: 4rem 0;
+    }
+
+    .inner-container {
+        padding: 0 1rem;
+        gap: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .impact-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .impact-card {
+        padding: 2rem;
+    }
+
+    .num {
+        font-size: 3rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -1,8 +1,6 @@
 
 import Style from './style.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
 import { Autoplay, Pagination } from 'swiper/modules';
 
 const HeroSection = () => {

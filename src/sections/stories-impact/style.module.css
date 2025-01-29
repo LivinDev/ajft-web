@@ -1,34 +1,123 @@
-.outerContainer{
-    color: black;
-   
+/* style.module.css */
+.outerContainer {
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    padding: 5rem 0;
 }
-.innercontainer{
+
+.innercontainer {
     max-width: 1300px;
     margin: 0 auto;
-    height: fit-content;
-    padding: 3rem 0;
+    padding: 0 2rem;
 }
-.sectiontite {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: black !important;
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
 }
-.cardcontainer{
+
+.titleWrapper {
+    max-width: 600px;
+}
+
+.subtitle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap:1rem;
+    gap: 0.5rem;
+    color: #2ecc71;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
 }
-@media (max-width:800px){
-    .cardcontainer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-            width: 100%;
-            gap: 1rem;
-            padding: 1rem;
-        }
 
+.icon {
+    animation: pulse 2s infinite;
+}
+
+.sectiontitle {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #2ecc71;
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #3498db;
+    transform: skew(-12deg);
+}
+
+.description {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 1024px) {
+    .headerSection {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sectiontitle {
+        font-size: 2.5rem;
+    }
+
+    .cardcontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .outerContainer {
+        padding: 3rem 0;
+    }
+
+    .innercontainer {
+        padding: 0 1rem;
+    }
+
+    .cardcontainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sectiontitle {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
 }

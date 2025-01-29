@@ -1,46 +1,198 @@
-.contactouter {
-    background-color: #f9f9f9;
-    padding: 5rem 0; 
+/* volunteerstyle.module.css */
+
+/* Base Styles */
+.volunteerPage {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
 }
 
-.contactinner {
-    display: flex;
-    max-width: 1200px; 
+.heroSection {
+    background: linear-gradient(rgba(0, 82, 155, 0.9), rgba(0, 119, 182, 0.9)),
+        url('../../assets/images/vol-bg-pattern.png');
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    margin-bottom: 4rem;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 2rem; 
+    line-height: 1.4;
+}
+
+.contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+/* Left Section Styles */
+.leftSection {
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.leftsection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; 
+.imageCard {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.imageView {
-    img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+.imageCard:hover {
+    transform: translateY(-5px);
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.responsiveImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.missionSection {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+    font-size: 2.2rem;
+    color: #2d3a4a;
+    margin-bottom: 1.5rem;
+}
+
+.accentLine {
+    width: 60px;
+    height: 4px;
+    background: #0077b6;
+    margin-bottom: 2rem;
+}
+
+.missionText {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.benefitsList li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-left: 4px solid #0077b6;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.benefitsList li:hover {
+    transform: translateX(10px);
+}
+
+.quoteBox {
+    background: #0077b6;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.quoteBox p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.quoteBox span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Right Section Styles */
+/* .rightSection {
+    position: relative;
+    height: fit-content;
+    top: -100px;
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+} */
+
+.rightSection:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contentWrapper {
+        grid-template-columns: 1fr;
+        padding: 0 2rem 4rem;
+    }
+
+    .rightSection {
+        top: 0;
+        margin-top: 2rem;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.2rem;
     }
 }
 
-.heading {
-    font-size: 2.5rem; 
-    color: #333;
-    font-weight: 700;
-}
+@media (max-width: 768px) {
+    .contentWrapper {
+        padding: 0 1.5rem 3rem;
+    }
 
-.description {
-    font-size: 1.2rem; 
-    color: #555; 
-    line-height: 1.6; 
-}
+    .missionSection {
+        padding: 1.5rem;
+    }
 
-.rightsection {
-    flex: 1;
-    background-color: #fff; 
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 2rem; }
+    .rightSection {
+        padding: 2rem;
+    }
+
+    .heroSection {
+        padding: 6rem 1.5rem 3rem;
+    }
+}

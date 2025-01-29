@@ -63,7 +63,7 @@ const HomeRoute: React.FC<HomeRouteProps> = ({ isAuthenticated }) => {
         }
       />
       <Route
-        path="/event"
+        path="/events"
         element={
           <PublicLayout>
             <EventPage />
