@@ -1,9 +1,9 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import styles from './style.module.css';
+import StyledNotification from '../../components/ui/Popup';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -12,91 +12,168 @@ const formSchema = z.object({
     .regex(/^\d+$/, 'Number must be digits only')
     .min(10, 'Number must be at least 10 digits'),
   email: z.string().email('Invalid email address'),
-  message: z.string().min(1, 'Message is required'),
+  message: z.string().optional(),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
 
+// interface SubmitStatus {
+//   type: 'success' | 'error' | null;
+//   message: string;
+//   title?: string;
+// }
+
 const ContactForm: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+ const [showNotification, setShowNotification] = useState(false);
+  const [notificationType, setNotificationType] = useState<'success' | 'error'>('success');
+  
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormSchema) => {
-    console.log(data);
+    const onSubmit = async (data: FormSchema) => {
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:3000/api/forms/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          mobile: data.number,
+          message: data.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      setNotificationType('success');
+      setShowNotification(true);
+      reset();
+      
+    } catch (error) {
+      setNotificationType('error');
+      setShowNotification(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer}>
-      <div className={styles.formGroup}>
-        <label htmlFor="name" className={styles.label}>
-          Name
-        </label>
-        <input
-          id="name"
-          {...register('name')}
-          placeholder="John Doe"
-          className={styles.input}
-        />
-        {errors.name && (
-          <p className={styles.errorMessage}>{errors.name.message}</p>
-        )}
-      </div>
+    <div className={styles.formWrapper}>
+       <StyledNotification
+        isOpen={showNotification}
+        onClose={() => setShowNotification(false)}
+        type={notificationType}
+        autoCloseDelay={3000}
+      />
 
-      <div className={styles.formGroup}>
-        <label htmlFor="number" className={styles.label}>
-          Number
-        </label>
-        <input
-          id="number"
-          {...register('number')}
-          placeholder="9142080934"
-          className={styles.input}
-        />
-        {errors.number && (
-          <p className={styles.errorMessage}>{errors.number.message}</p>
-        )}
-      </div>
+      <form 
+        onSubmit={handleSubmit(onSubmit)} 
+        className={styles.formContainer}
+        noValidate
+      >
+        <div className={styles.formGroup}>
+          <label htmlFor="name" className={styles.label}>
+            Name
+          </label>
+          <input
+            id="name"
+            {...register('name')}
+            placeholder="John Doe"
+            className={`${styles.input} ${errors.name ? styles.inputError : ''}`}
+            disabled={isSubmitting}
+            aria-invalid={errors.name ? 'true' : 'false'}
+          />
+          {errors.name && (
+            <p className={styles.errorMessage} role="alert">
+              {errors.name.message}
+            </p>
+          )}
+        </div>
 
-      <div className={styles.formGroup}>
-        <label htmlFor="email" className={styles.label}>
-          Email
-        </label>
-        <input
-          id="email"
-          {...register('email')}
-          placeholder="user@gmail.com"
-          className={styles.input}
-        />
-        {errors.email && (
-          <p className={styles.errorMessage}>{errors.email.message}</p>
-        )}
-      </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="number" className={styles.label}>
+            Number
+          </label>
+          <input
+            id="number"
+            {...register('number')}
+            placeholder="9142080934"
+            className={`${styles.input} ${errors.number ? styles.inputError : ''}`}
+            disabled={isSubmitting}
+            aria-invalid={errors.number ? 'true' : 'false'}
+          />
+          {errors.number && (
+            <p className={styles.errorMessage} role="alert">
+              {errors.number.message}
+            </p>
+          )}
+        </div>
 
-      <div className={styles.formGroup}>
-        <label htmlFor="message" className={styles.label}>
-          Message
-        </label>
-        <textarea
-          id="message"
-          {...register('message')}
-          rows={5}
-          placeholder="Enter Your Message here"
-          className={styles.textarea}
-        />
-        {errors.message && (
-          <p className={styles.errorMessage}>{errors.message.message}</p>
-        )}
-      </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            {...register('email')}
+            placeholder="user@gmail.com"
+            className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
+            disabled={isSubmitting}
+            aria-invalid={errors.email ? 'true' : 'false'}
+          />
+          {errors.email && (
+            <p className={styles.errorMessage} role="alert">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
 
-      <button type="submit" className={styles.submitButton}>
-        Submit
-      </button>
-    </form>
+        <div className={styles.formGroup}>
+          <label htmlFor="message" className={styles.label}>
+            Message
+          </label>
+          <textarea
+            id="message"
+            {...register('message')}
+            rows={5}
+            placeholder="Enter Your Message here"
+            className={`${styles.textarea} ${errors.message ? styles.inputError : ''}`}
+            disabled={isSubmitting}
+            aria-invalid={errors.message ? 'true' : 'false'}
+          />
+          {errors.message && (
+            <p className={styles.errorMessage} role="alert">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+
+        <button 
+          type="submit" 
+          className={`${styles.submitButton} ${isSubmitting ? styles.submitting : ''}`}
+          disabled={isSubmitting}
+          aria-disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Submit'}
+        </button>
+      </form>
+    </div>
   );
 };
 

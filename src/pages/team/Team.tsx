@@ -1,8 +1,9 @@
 import TeamCard from '../../components/ui/cards/TeamCard';
 import ProfileImage from '../../assets/images/founder.jpg';
-import Style from './style.module.css';
 import TeamImage from '../../assets/images/team.jpg';
 import Volunteer from '../../sections/volunteer/Volunteer';
+import styles from './style.module.css';
+
 const teamMembers = [
   {
     name: 'John Doe',
@@ -54,37 +55,46 @@ const teamMembers = [
       github: 'https://github.com/johndoe',
     },
   },
-  // Add more team members here
+  
 ];
 
 const TeamSection = () => {
   return (
-    <div className={Style.teamcontainer}>
-      <div className={Style.innerteamsection}>
-        <div className={Style.imgsection}>
-          <img src={TeamImage} />
+    <div className={styles.teamContainer}>
+      {/* Team Introduction */}
+      <div className={styles.teamIntroSection}>
+        <div className={styles.introContent}>
+          <h1 className={styles.mainHeading}>Meet Our Team</h1>
+          <p className={styles.introText}>
+            Our dedicated team of professionals works tirelessly to create positive change 
+            in communities across Bihar. Together, we bring diverse skills and shared commitment 
+            to our mission.
+          </p>
         </div>
-        <p className={Style.teamdescription}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem nemo nobis cum atque id sint asperiores possimus quos
-          tempore, nulla ipsum illum officia dolores blanditiis iste, adipisci
-          aut velit voluptas? Exercitationem nemo nobis cum atque id sint
-          asperiores possimus quos tempore, nulla ipsum illum officia dolores
-          blanditiis iste, adipisci aut velit voluptas? aut velit voluptas?
-          Exercitationem nemo nobis cum atque id sint asperiores possimus quos
-          tempore, nulla ipsum illum officia dolores
-        </p>
+        <div className={styles.imageSection}>
+          <img src={TeamImage} alt="Our Team" className={styles.teamImage} />
+        </div>
       </div>
-      <div className={Style.teamcardcontainer}>
-        <div className={Style.innersectionofteam}>
-          <h1 className={Style.teamheading}>OUR TEAM</h1>
-          <div className={Style.teamcard}>
+
+      {/* Team Members Grid */}
+      <div className={styles.teamGridSection}>
+        <div className={styles.gridContainer}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.teamHeading}>Our Leadership Team</h2>
+            <div className={styles.headingAccent}></div>
+          </div>
+          
+          <div className={styles.teamGrid}>
             {teamMembers.map((member, index) => (
-              <TeamCard key={index} {...member} />
+              <div key={index} className={styles.cardWrapper}>
+                <TeamCard {...member} />
+              </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Volunteer Section */}
       <Volunteer />
     </div>
   );

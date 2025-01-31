@@ -1,43 +1,222 @@
-.hero-section{
-    width: 100%;
-    
-}
-.item{
-    height: 80vh;
-    width: 100%;
-   background-image: url(../../assets/images/hero-image.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-}
-.item2{
-    height: 80vh;
-    width: 100%;
-    background-image: url(../../assets/images/bg-2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.item3{
-    height: 80vh;
-    width: 100%;
-background-image: url(../../assets/images/bg-3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.item4{
-    height: 80vh;
-    width: 100%;
-    background-image: url(../../assets/images/bg-4.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-}
-.swiper-pagination-bullet {
-    background: #adadad;
+.heroSection {
+    display: flex;
+    min-height: 85vh;
+    background-color: #ffffff;
 }
 
-.swiper-pagination-bullet-active {
-    background: #007aff;
+/* Content Side Styles */
+.contentSide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+}
+
+.contentWrapper {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #4a148c;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.primaryButton {
+    padding: 1rem 2rem;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primaryButton:hover {
+    background-color: #3a1070;
+}
+
+.secondaryButton {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #4a148c;
+    border: 2px solid #4a148c;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+    background-color: #4a148c;
+    color: white;
+}
+
+.statsWrapper {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.statNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4a148c;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+/* Image Side Styles */
+.imageSide {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiperContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.slideImage1,
+.slideImage2,
+.slideImage3,
+.slideImage4 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slideImage1 {
+    background-image: url(../../assets/images/hero-image.png);
+}
+
+.slideImage2 {
+    background-image: url(../../assets/images/bg-2.jpg);
+}
+
+.slideImage3 {
+    background-image: url(../../assets/images/bg-3.jpg);
+}
+
+.slideImage4 {
+    background-image: url(../../assets/images/bg-4.jpg);
+}
+
+/* Swiper Custom Styles */
+:global(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+:global(.swiper-pagination-bullet-active) {
+    background: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contentSide {
+        padding: 3rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .heroSection {
+        flex-direction: column;
+    }
+
+    .contentSide,
+    .imageSide {
+        width: 100%;
+    }
+
+    .contentSide {
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .contentWrapper {
+        margin: 0 auto;
+    }
+
+    .buttonGroup {
+        justify-content: center;
+    }
+
+    .statsWrapper {
+        justify-content: center;
+    }
+
+    .statItem {
+        align-items: center;
+    }
+
+    .imageSide {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 640px) {
+    .contentSide {
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+    }
+
+    .statsWrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

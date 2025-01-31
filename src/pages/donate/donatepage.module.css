@@ -1,41 +1,325 @@
-.mainContainer {
+.donationContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mainTitle {
+    text-align: center;
+    color: #4a148c;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.tabsContainer {
+    margin-bottom: 2rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.tabButton svg {
+    transition: transform 0.3s ease;
+}
+
+.tabButton:hover svg {
+    transform: scale(1.1);
+}
+
+.activeTab {
+    background-color: #4a148c;
+    color: white;
+    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.2);
+}
+
+.contentSection {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.leftContent {
+    flex: 1;
+    padding: 2rem;
+    background-color: #4a148c;
+    color: white;
+}
+
+.pledgeTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.itemsList {
+    list-style: none;
+    padding: 0;
+}
+
+.itemsList li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.itemsList li:before {
+    content: "•";
+    color: #ce93d8;
+}
+
+.rightContent {
+    flex: 1;
+    position: relative;
+}
+
+.buildingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.donationButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.indianDonation,
+.foreignDonation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.indianDonation {
+    background-color: #4a148c;
+    color: white;
+}
+
+.foreignDonation {
+    background-color: white;
+    color: #4a148c;
+    border: 2px solid #4a148c;
+}
+
+.indianDonation:hover,
+.foreignDonation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .contentSection {
+        flex-direction: column;
+    }
+
+    .rightContent {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tabButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .donationButtons {
+        flex-direction: column;
+    }
+
+    .mainTitle {
+        font-size: 2rem;
+    }
+}
+
+.additionalMethods {
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.methodsTitle {
+    text-align: center;
+    color: #4a148c;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.methodsGrid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.methodCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    max-width: 1300px;
-    margin: 0 auto;
+    gap: 1rem;
 }
 
-.cardSection {
+.methodIcon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.methodName {
+    font-size: 1.125rem;
+    color: #4a5568;
+}
+
+.bankDetailsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.card {
-    background: #fff;
+.bankDetailsCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bankDetailsCard h3 {
+    color: #4a148c;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detailLabel {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.detailValue {
+    color: #1a202c;
+}
+
+.campaignSection {
+    margin-top: 4rem;
+    background: #1a365d;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.campaignContent {
+    display: flex;
+    align-items: center;
+}
+
+.campaignText {
+    flex: 1;
+    padding: 3rem;
+    color: white;
+}
+
+.campaignText h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.campaignText h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.campaignImage {
+    flex: 1;
+    height: 400px;
+}
+
+.campaignImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.donateButton {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #4a148c;
+    color: white;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 40px;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.logo {
-    width: 100px;
-    margin-bottom: 20px;
+.donateButton:hover {
+    background: #3a1070;
+    transform: translateY(-2px);
 }
 
-.accountInfo {
-    margin-bottom: 20px;
+@media (max-width: 1024px) {
+    .bankDetailsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .campaignContent {
+        flex-direction: column;
+    }
+
+    .campaignImage {
+        width: 100%;
+        order: -1;
+    }
 }
 
-.details {
-    text-align: left;
+@media (max-width: 768px) {
+    .methodsGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campaignText {
+        padding: 2rem;
+    }
 }

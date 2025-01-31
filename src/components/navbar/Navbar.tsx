@@ -1,59 +1,147 @@
+// Navbar.tsx
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import styles from './navbar.module.css';
 
-import { Link } from 'react-router-dom';
-import Style from './navbar.module.css';
+interface SubMenuItem {
+  title: string;
+  href: string;
+}
+
+interface MenuItem {
+  title: string;
+  href: string;
+  subItems?: SubMenuItem[];
+}
+
+const navItems: MenuItem[] = [
+  { 
+    title: 'HOME',
+    href: '/'
+  },
+  { 
+    title: 'ABOUT US',
+    href: '/aboutus',
+    subItems: [
+      { title: 'Our Team', href: '/team' },
+      { title: 'Certificates', href: '/certificates' },
+      { title: 'Gallery', href: '/gallery' },
+    ]
+  },
+  { 
+    title: 'OUR IMPACT',
+    href: '/our-impact',
+   
+  },
+  { 
+    title: 'AREAS OF WORK',
+    href: '/our-area-work'
+  },
+ 
+  { 
+    title: 'EVENTS ',
+    href: '/events',
+     subItems: [
+      { title: 'Success Stories', href: '/impact/stories' },
+      { title: 'Statistics', href: '/impact/stats' }
+    ]
+  },
+  { 
+    title: 'GET INVOLVED',
+    href: '/volunteer'
+  },
+  { 
+    title: 'CONTACT US',
+    href: '/contact'
+  }
+];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleMouseEnter = (title: string) => {
+    setActiveDropdown(title);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+  };
+
   return (
-    <div className={Style.navbar}>
-      <nav className={Style.innernavbar}>
-        <ul className={Style.navlist}>
-          <li>
-            <Link to="/"> HOME</Link>
-          </li>
-          <li className={Style.dropdown}>
-            <Link to="/"> ABOUT US</Link>
-            <ul className={Style.dropdownmenu}>
-              <li>
-                <Link to="/aboutus">ABOUT US</Link>
-              </li>
-              <li>
-                <Link to="/team">OUR TEAM</Link>
-              </li>
-              <li>
-                <Link to="/certificates">CERTIFICATES</Link>
-              </li>
-              <li>
-                <Link to="/gallery">GALLERY</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link to="/our-impact"> OUR IMPACT</Link>
-          </li>
-          <li>
-            <Link to="/our-area-work"> AREA OF WORK</Link>
-          </li>
-          <li className={Style.dropdown}>
-            <Link to="/event"> EVENTS</Link>
-          </li>
-          {/* <li>
-            <Link to="/"> VISION</Link>
-          </li> */}
-          <li>
-            <Link to="/volunteer"> GET INVOLVED</Link>
-          </li>
-          {/* <li>
-            <Link to="/"> FOUNDATION 2019</Link>
-          </li> */}
-          <li>
-            <Link to="/contact"> CONTACT US</Link>
-          </li>
-          {/* <li>
-            <Link to="/"> NSE</Link>
-          </li> */}
-        </ul>
-      </nav>
-    </div>
+    <nav className={styles.navbar}>
+      <div className={styles.navContainer}>
+        <div className={styles.navWrapper}>
+          <button
+            onClick={toggleMenu}
+            className={styles.mobileMenuButton}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          <div className={styles.desktopMenu}>
+            {navItems.map((item) => (
+              <div
+                key={item.title}
+                className={styles.navItem}
+                onMouseEnter={() => handleMouseEnter(item.title)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <a
+                  href={item.href}
+                  className={styles.navLink}
+                >
+                  {item.title}
+                </a>
+                {item.subItems && activeDropdown === item.title && (
+                  <div className={styles.dropdown}>
+                    {item.subItems.map((subItem) => (
+                      <a
+                        key={subItem.title}
+                        href={subItem.href}
+                        className={styles.dropdownItem}
+                      >
+                        {subItem.title}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={`${styles.mobileMenu} ${isOpen ? styles.isOpen : ''}`}>
+          {navItems.map((item) => (
+            <div key={item.title} className={styles.mobileNavItem}>
+              <a
+                href={item.href}
+                className={styles.mobileNavLink}
+              >
+                {item.title}
+              </a>
+              {item.subItems && (
+                <div className={styles.mobileDropdown}>
+                  {item.subItems.map((subItem) => (
+                    <a
+                      key={subItem.title}
+                      href={subItem.href}
+                      className={styles.mobileDropdownItem}
+                    >
+                      {subItem.title}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
 

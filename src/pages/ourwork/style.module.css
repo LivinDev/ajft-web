@@ -1,94 +1,219 @@
-/* // src/components/OurAreaOfWork/OurAreaOfWork.module.scss */
 .container {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .introduction {
-    /* // text-align: center; */
-    margin-bottom: 40px;
-    padding: 2rem 0;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    padding: 5rem 2rem;
+    color: white;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
+.mainTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
 
-    p {
-        font-size: 18px;
-        color: #666;
-    }
+.mainTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Education Section - Light Purple */
+.section:nth-child(2) {
+    background: linear-gradient(135deg, #f3f4f6 0%, #ede9fe 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Women Empowerment Section - Light Pink */
+.section:nth-child(3) {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fff1f2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Healthcare Section - Light Teal */
+.section:nth-child(4) {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .section {
-    margin-bottom: 60px;
+    padding: 4rem 0;
+}
 
-    h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        /* // text-align: center; */
-    }
+.content,
+.content2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+}
 
-    .content  {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+.content2 {
+    flex-direction: row-reverse;
+}
 
-        .image {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
+.imageWrapper {
+    flex: 1;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        
-            max-width: 600px;
-        }
-    }
+.imageWrapper:hover {
+    transform: translateY(-10px);
+}
+
+.image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.05);
+}
+
+.textContent {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4c1d95;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.content2 .sectionTitle {
+    text-align: right;
+}
+
+.sectionTitle::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #8b5cf6;
+    border-radius: 2px;
+}
+
+.content2 .sectionTitle::before {
+    left: auto;
+    right: 0;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+.content2 .description {
+    text-align: right;
+}
+
+/* Rest of the media queries remain the same */
+@media (max-width: 1024px) {
+
+    .content,
     .content2 {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        gap: 3rem;
+    }
 
-        .image {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        h2{
-            text-align: right;
-        }
+    .mainTitle {
+        font-size: 2.5rem;
+    }
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-          text-align: right;
-            max-width: 600px;
-        }
+    .sectionTitle {
+        font-size: 2rem;
     }
 }
 
+@media (max-width: 768px) {
 
-@media (min-width: 768px) {
-    .section .content {
-        flex-direction: row;
+    .content,
+    .content2 {
+        flex-direction: column;
+        gap: 2rem;
+    }
 
-        .image {
-            margin-right: 20px;
-            margin-bottom: 0;
-        }
+    .content2 .sectionTitle,
+    .content2 .description {
+        text-align: left;
+    }
+
+    .content2 .sectionTitle::before {
+        left: 0;
+        right: auto;
+    }
+
+    .introduction {
+        padding: 3rem 1.5rem;
+    }
+
+    .mainTitle {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 2rem 0;
+    }
+
+    .content,
+    .content2 {
+        padding: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+
+    .description {
+        font-size: 1rem;
     }
 }

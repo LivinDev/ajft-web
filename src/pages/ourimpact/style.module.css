@@ -1,157 +1,261 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+}
 
-.header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/bac-image.svg') no-repeat center center/cover;
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    padding: 8rem 2rem;
+    text-align: center;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 1.5em;
-        max-width: 800px;
-        margin: 0 auto;
-    }
 }
 
-/* src/components/Summary/Summary.module.scss */
-.summary {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-
-    p {
-        font-size: 1.2em;
-    }
-}
-/* // src/components/ImpactMetrics/ImpactMetrics.module.scss */
-.metrics {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #18205a;
-
-    .metric {
-        text-align: center;
-
-        h2 {
-            font-size: 3em;
-            color: Yellow;
-        }
-
-        p {
-            font-size: 1em;
-            color: white;
-        }
-    }
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* // src/components/ProjectDetail/ProjectDetail.module.scss
-// src/components/ProjectDetail/style.module.scss */
-.project {
-    padding: 50px 20px;
- 
-    border-radius: 8px;
-    /* // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.heroTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Metrics Section */
+.metricsSection {
+    padding: 4rem 2rem;
+    background: white;
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.metricsGrid {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
 
-    .title {
-        font-size: 2.5em;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
+.metricCard {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.metricCard:hover {
+    transform: translateY(-5px);
+}
+
+.metricIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.metricCount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.metricTitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+/* Growth Section */
+.growthSection {
+    padding: 4rem 2rem;
+    background: #f8fafc;
+}
+
+.sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.chartContainer {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Success Stories Section */
+.storiesSection {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.storiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.storyCard {
+    background: #f8fafc;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.storyCard:hover {
+    transform: translateY(-5px);
+}
+
+.storyContent {
+    padding: 2rem;
+}
+
+.storyTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.storyLocation {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.storyImpact {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.impactMetric {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.storyDescription {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.ctaContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.ctaText {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.ctaButton {
+    background: white;
+    color: #4f46e5;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .heroTitle {
+        font-size: 3rem;
     }
 
-    .description {
-        font-size: 1.2em;
-        color: #666;
-        margin-bottom: 30px;
-        text-align: center;
+    .heroSubtitle {
+        font-size: 1.25rem;
     }
 
-    .images {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 20px;
-
-        .image {
-            width: 30%;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-    }
-
-    .statistics {
-        font-size: 1.5em;
-        color: #333;
-        margin-top: 30px;
-        text-align: center;
-        font-weight: bold;
+    .metricCount {
+        font-size: 2rem;
     }
 }
 
-/* // src/components/Testimonials/Testimonials.module.scss
-// src/components/Testimonials/style.module.scss */
-.testimonials {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 20px;
-    background-color: #f7f6b9;
-    gap: 30px;
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1.5rem;
+    }
 
-    .testimonial {
-        text-align: center;
-        max-width: 300px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        transition: transform 0.3s ease;
+    .metricsSection {
+        padding: 3rem 1.5rem;
+    }
 
-        &:hover {
-            transform: translateY(-10px);
-        }
+    .sectionTitle {
+        font-size: 2rem;
+    }
 
-        .imageContainer {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
+    .ctaTitle {
+        font-size: 2rem;
+    }
+}
 
-            .image {
-                width: 150px;
-                height:150px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 4px solid #fff;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            }
-        }
+@media (max-width: 640px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
 
-        .quote {
-            font-style: italic;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .metricCard {
+        padding: 1.5rem;
+    }
 
-        .name {
-            font-weight: bold;
-            color: #555;
-        }
+    .ctaButton {
+        width: 100%;
     }
 }

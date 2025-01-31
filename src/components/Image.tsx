@@ -1,30 +1,46 @@
-import { FC } from 'react';
-import Style from '../styles/ui/image.module.css';
-interface ImagesProps {
-  data: {
+import React from 'react';
+import styles from '../styles/ui/image.module.css';
+
+interface ImageProps {
+  data: Array<{
     src: string;
-    title: string;
+    alt?: string;
+    title?: string;
     description?: string;
-  }[];
+  }>;
   onClick: (index: number) => void;
 }
 
-const Images: FC<ImagesProps> = (props) => {
-  const { data, onClick } = props;
-
-  const handleClickImage = (index: number) => {
-    onClick(index);
-  };
-
+const Images: React.FC<ImageProps> = ({ data, onClick }) => {
   return (
-    <div className={Style.imagescontainer}>
-      {data.map((slide, index) => (
-        <div
-          onClick={() => handleClickImage(index)}
+    <div className={styles.imageGrid}>
+      {data.map((image, index) => (
+        <div 
           key={index}
-          className={Style.image}
+          className={styles.imageWrapper}
+          onClick={() => onClick(index)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              onClick(index);
+            }
+          }}
         >
-          <img src={slide.src} alt={slide.description} />
+          <img
+            src={image.src}
+            alt={image.alt || `Certificate ${index + 1}`}
+            className={styles.image}
+            loading="lazy"
+          />
+          {image.title && (
+            <div className={styles.imageOverlay}>
+              <h3 className={styles.imageTitle}>{image.title}</h3>
+              {image.description && (
+                <p className={styles.imageDescription}>{image.description}</p>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </div>

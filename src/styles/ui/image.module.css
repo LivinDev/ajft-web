@@ -1,20 +1,82 @@
-.imagescontainer {
-    max-width: 1200px;
-    margin: 2rem auto;
+.imageGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #f7fafc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper:hover {
+    transform: translateY(-4px);
+}
+
+.imageWrapper:focus {
+    outline: 2px solid #4299e1;
+    outline-offset: 2px;
 }
 
 .image {
     width: 100%;
-    height: 20rem;
-    cursor: pointer;
-}
-
-.image img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.05);
+}
+
+.imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 1.5rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.imageWrapper:hover .imageOverlay {
+    transform: translateY(0);
+}
+
+.imageTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.imageDescription {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .imageGrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .imageTitle {
+        font-size: 1rem;
+    }
+
+    .imageDescription {
+        font-size: 0.75rem;
+    }
 }
