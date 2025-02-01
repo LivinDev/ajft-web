@@ -1,6 +1,5 @@
 import Style from './volunteerstyle.module.css';
 import VolunteerForm from './VolunteerForm';
-import VolunteerImage from '../../assets/images/volunteer.png';
 import { useEffect } from 'react';
 
 const VolunteerPage = () => {
@@ -17,14 +16,14 @@ const VolunteerPage = () => {
 
       <div className={Style.contentWrapper}>
         <div className={Style.leftSection}>
-          <div className={Style.imageCard}>
+          {/* <div className={Style.imageCard}>
             <img 
               src={VolunteerImage} 
               alt="Volunteer team working together" 
               className={Style.responsiveImage}
             />
             <div className={Style.imageOverlay}></div>
-          </div>
+          </div> */}
           
           <div className={Style.missionSection}>
             <h2 className={Style.sectionTitle}>Our Volunteer Mission</h2>
