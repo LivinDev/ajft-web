@@ -3,7 +3,6 @@
 import LogoSection from '../components/navbar/LogoSection';
 import Navbar from '../components/navbar/Navbar';
 import SocialIcons from '../components/socialBar/SocialIcons';
-import EventsBar from '../components/eventsBar/EventsBar';
 import Footer from '../components/footer/Footer';
 
 interface PublicLayoutProps {
@@ -24,7 +23,7 @@ const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
       </MarqueeText> */}
       <SocialIcons />
       {children}
-      <EventsBar />
+      {/* <EventsBar /> */}
       <Footer />
     </>
   );
