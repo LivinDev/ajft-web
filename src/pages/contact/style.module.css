@@ -1,3 +1,91 @@
+.contactouter {
+    padding-top: 3rem;
+    background-color: rgb(197, 246, 245);
+}
+
+.contactinner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    gap: 2rem;
+
+    /* Make it stack on smaller screens */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.leftsection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.rightsection {
+    flex: 1;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    /* Adjust spacing on mobile */
+    @media (max-width: 480px) {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.itemcircle {
+    padding: 1.5rem;
+    background-color: rgb(24, 12, 92);
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+
+    /* Slightly smaller on mobile */
+    @media (max-width: 480px) {
+        padding: 1.2rem;
+    }
+
+    &:hover {
+        background-color: rgb(67, 54, 143);
+    }
+}
+
+.contactdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    /* Center text on mobile */
+    @media (max-width: 480px) {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+
+        /* Smaller heading on mobile */
+        @media (max-width: 480px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    p {
+
+        /* Ensure text is readable on small screens */
+        @media (max-width: 480px) {
+            font-size: 0.9rem;
+        }
+    }
+}
 
 .formContainer {
     max-width: 600px;
@@ -6,6 +94,11 @@
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Adjust padding on mobile */
+    @media (max-width: 480px) {
+        padding: 1rem;
+    }
 }
 
 .formGroup {
@@ -28,16 +121,22 @@
     font-size: 1rem;
     color: #333;
     transition: border-color 0.3s;
+
+    /* Adjust padding on mobile */
+    @media (max-width: 480px) {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 .input:focus,
 .textarea:focus {
     border-color: #007bff;
     outline: none;
-    
 }
+
 .textarea {
-    resize: none; 
+    resize: none;
 }
 
 .errorMessage {
@@ -56,6 +155,12 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+
+    /* Full width on mobile */
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 0.6rem 1rem;
+    }
 }
 
 .submitButton:hover {
@@ -66,49 +171,9 @@
     height: 50vh;
     width: 100%;
     overflow: hidden;
-}
-.contactouter{
-padding-top:3rem;
-background-color: rgb(197, 246, 245);
-}
-.contactinner{
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 2rem 1rem;
-    
-}
 
-.leftsection{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-.rightsection{
-    flex: 1;
-}
-.item{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.itemcircle{
-    padding: 1.5rem;
-    background-color: rgb(24, 12, 92);
-    border-radius: 50%;
-    transform: background-color 0,5s ease;
-    &:hover{
-background-color: rgb(67, 54, 143);
-
-    }
-}
-.contactdetails{
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-    h1{
-        font-size: 1.5rem;
+    /* Adjust height on mobile */
+    @media (max-width: 480px) {
+        height: 40vh;
     }
 }

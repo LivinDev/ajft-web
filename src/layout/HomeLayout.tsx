@@ -1,9 +1,9 @@
 // PublicLayout.tsx
 
 import LogoSection from '../components/navbar/LogoSection';
-import Navbar from '../components/navbar/Navbar';
 import SocialIcons from '../components/socialBar/SocialIcons';
 import Footer from '../components/footer/Footer';
+import Navbar from '../components/navbar/Navbar';
 
 interface PublicLayoutProps {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
   return (
     <>
       {/* <TopBanner /> */}
-      <LogoSection />
+      {/* <LogoSection /> */}
       <Navbar />
       {/* <MarqueeText>
         <h1>
