@@ -58,7 +58,7 @@ const Footer = () => {
             <div className={Style.socialLinks}>
               <a href="#" aria-label="Facebook"><Facebook /></a>
               <a href="#" aria-label="Twitter"><Twitter /></a>
-              <a href="#" aria-label="Instagram"><Instagram /></a>
+              <a target='_blank' href="https://www.instagram.com/anandjivanfoundation/" aria-label="Instagram"><Instagram /></a>
               <a href="#" aria-label="Youtube"><Youtube /></a>
             </div>
           </div>
