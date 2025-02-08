@@ -19,6 +19,9 @@ import LoginLayout from '../layout/LoginLayout';
 import DashBoard from '../pages/dashboard';
 import ProtectedLayout from '../layout/ProtextedLayout';
 import PageNotFound from '../pages/404/PageNotFound';
+import Governance from '../pages/governance/Governance';
+import Financials from '../pages/financials/Financials';
+import CareerPage from '../pages/career/CarrerPage';
 
 interface HomeRouteProps {
   isAuthenticated: boolean;
@@ -59,6 +62,22 @@ const HomeRoute: React.FC<HomeRouteProps> = ({ isAuthenticated }) => {
         element={
           <PublicLayout>
             <AboutPage />
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/governance"
+        element={
+          <PublicLayout>
+            <Governance/>
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/financials"
+        element={
+          <PublicLayout>
+            <Financials/>
           </PublicLayout>
         }
       />
@@ -123,6 +142,14 @@ const HomeRoute: React.FC<HomeRouteProps> = ({ isAuthenticated }) => {
         element={
           <PublicLayout>
             <DontePage />
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/career"
+        element={
+          <PublicLayout>
+            <CareerPage />
           </PublicLayout>
         }
       />

@@ -1,3 +1,4 @@
+/* style.module.css */
 .teamContainer {
     width: 100%;
     overflow: hidden;
@@ -83,10 +84,25 @@
     border-radius: 2px;
 }
 
-.teamGrid {
+/* Leader Row */
+.leaderRow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.leaderRow .cardWrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Core Team Row */
+.coreTeamRow {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    padding: 0 1rem;
 }
 
 .cardWrapper {
@@ -99,8 +115,9 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .teamGrid {
-        grid-template-columns: repeat(2, 1fr);
+    .coreTeamRow {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 
     .mainHeading {
@@ -109,6 +126,10 @@
 }
 
 @media (max-width: 768px) {
+    .coreTeamRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .teamIntroSection {
         padding: 3rem 1.5rem;
     }
@@ -123,9 +144,8 @@
 }
 
 @media (max-width: 640px) {
-    .teamGrid {
+    .coreTeamRow {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .teamIntroSection {
@@ -134,5 +154,9 @@
 
     .introText {
         font-size: 1.1rem;
+    }
+
+    .leaderRow .cardWrapper {
+        max-width: 100%;
     }
 }

@@ -1,6 +1,6 @@
 // PublicLayout.tsx
 
-import LogoSection from '../components/navbar/LogoSection';
+// import LogoSection from '../components/navbar/LogoSection';
 import SocialIcons from '../components/socialBar/SocialIcons';
 import Footer from '../components/footer/Footer';
 import Navbar from '../components/navbar/Navbar';

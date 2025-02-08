@@ -1,61 +1,50 @@
 import TeamCard from '../../components/ui/cards/TeamCard';
 import ProfileImage from '../../assets/images/founder.jpg';
-import TeamImage from '../../assets/images/team.jpg';
 import Volunteer from '../../sections/volunteer/Volunteer';
 import styles from './style.module.css';
 
-const teamMembers = [
+const leaderMember = {
+  name: 'John Doe',
+  photo: ProfileImage,
+  position: 'Founder & CEO',
+  socialMedia: {
+    twitter: 'https://twitter.com/johndoe',
+    linkedin: 'https://linkedin.com/in/johndoe',
+    github: 'https://github.com/johndoe',
+  },
+};
+
+const coreTeamMembers = [
   {
-    name: 'John Doe',
+    name: 'Jane Smith',
     photo: ProfileImage,
-    position: 'Software Engineer',
+    position: 'Technical Lead',
     socialMedia: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
+      twitter: 'https://twitter.com/janesmith',
+      linkedin: 'https://linkedin.com/in/janesmith',
+      github: 'https://github.com/janesmith',
     },
   },
   {
-    name: 'John Doe',
+    name: 'Mike Johnson',
     photo: ProfileImage,
-    position: 'Software Engineer',
+    position: 'Operations Director',
     socialMedia: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
+      twitter: 'https://twitter.com/mikejohnson',
+      linkedin: 'https://linkedin.com/in/mikejohnson',
+      github: 'https://github.com/mikejohnson',
     },
   },
   {
-    name: 'John Doe',
+    name: 'Sarah Williams',
     photo: ProfileImage,
-    position: 'Software Engineer',
+    position: 'Community Manager',
     socialMedia: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
+      twitter: 'https://twitter.com/sarahwilliams',
+      linkedin: 'https://linkedin.com/in/sarahwilliams',
+      github: 'https://github.com/sarahwilliams',
     },
   },
-  {
-    name: 'John Doe',
-    photo: ProfileImage,
-    position: 'Software Engineer',
-    socialMedia: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
-    },
-  },
-  {
-    name: 'John Doe',
-    photo: ProfileImage,
-    position: 'Software Engineer',
-    socialMedia: {
-      twitter: 'https://twitter.com/johndoe',
-      linkedin: 'https://linkedin.com/in/johndoe',
-      github: 'https://github.com/johndoe',
-    },
-  },
-  
 ];
 
 const TeamSection = () => {
@@ -71,9 +60,9 @@ const TeamSection = () => {
             to our mission.
           </p>
         </div>
-        <div className={styles.imageSection}>
+        {/* <div className={styles.imageSection}>
           <img src={TeamImage} alt="Our Team" className={styles.teamImage} />
-        </div>
+        </div> */}
       </div>
 
       {/* Team Members Grid */}
@@ -84,8 +73,16 @@ const TeamSection = () => {
             <div className={styles.headingAccent}></div>
           </div>
           
-          <div className={styles.teamGrid}>
-            {teamMembers.map((member, index) => (
+          {/* Leader Row */}
+          <div className={styles.leaderRow}>
+            <div className={styles.cardWrapper}>
+              <TeamCard {...leaderMember} />
+            </div>
+          </div>
+
+          {/* Core Team Row */}
+          <div className={styles.coreTeamRow}>
+            {coreTeamMembers.map((member, index) => (
               <div key={index} className={styles.cardWrapper}>
                 <TeamCard {...member} />
               </div>

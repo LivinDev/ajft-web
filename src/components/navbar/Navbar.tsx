@@ -23,9 +23,13 @@ const navItems: MenuItem[] = [
     href: '/aboutus',
     subItems: [
       { title: 'About us', href: '/aboutus' },
+      { title: 'Governance', href: '/governance' },
+      { title: 'Financials', href: '/financials' },
+      { title: 'About us', href: '/aboutus' },
       { title: 'Our Team', href: '/team' },
       { title: 'Certificates', href: '/certificates' },
       { title: 'Gallery', href: '/gallery' },
+    
     ]
   },
   { 
@@ -51,7 +55,8 @@ const navItems: MenuItem[] = [
   { 
     title: 'CONTACT US',
     href: '/contact'
-  }
+  },
+    { title: 'CAREER', href: '/career' },
 ];
 
 const Navbar = () => {
