@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './governance.module.css';
 import FounderImage from "../../assets/images/founder.png"
-
+import DummyImage from "../../assets/images/dummy-profile.jpeg"
 const Governance = () => {
   const [activeTab, setActiveTab] = useState('mentor');
 
@@ -42,7 +42,7 @@ const Governance = () => {
         <div key={index} className={styles.trusteeCard}>
           <div className={styles.trusteeInfo}>
             <img 
-              src={`/trustee-${index + 1}.jpg`}
+              src={DummyImage}
               alt={trustee.name}
               className={styles.trusteeImage}
             />

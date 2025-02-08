@@ -2,49 +2,48 @@ import TeamCard from '../../components/ui/cards/TeamCard';
 import ProfileImage from '../../assets/images/founder.jpg';
 import Volunteer from '../../sections/volunteer/Volunteer';
 import styles from './style.module.css';
+import PoojaImag from "../../assets/images/pooja.jpeg"
+import AnkitaImg from "../../assets/images/ankitakumari.png"
+import Founder from "../../assets/images/founder.png"
+import Dummy from "../../assets/images/dummy-profile.jpeg"
 
 const leaderMember = {
-  name: 'John Doe',
-  photo: ProfileImage,
-  position: 'Founder & CEO',
-  socialMedia: {
-    twitter: 'https://twitter.com/johndoe',
-    linkedin: 'https://linkedin.com/in/johndoe',
-    github: 'https://github.com/johndoe',
-  },
+  name: 'Mr. Guddu Kumar',
+  photo: Founder,
+  position: 'Chairperson',
+  email: 'guddu.ajftrust@gmail.com',
+  qualification: 'M.A Psychology'
 };
 
 const coreTeamMembers = [
   {
-    name: 'Jane Smith',
-    photo: ProfileImage,
-    position: 'Technical Lead',
-    socialMedia: {
-      twitter: 'https://twitter.com/janesmith',
-      linkedin: 'https://linkedin.com/in/janesmith',
-      github: 'https://github.com/janesmith',
-    },
+    name: 'Mrs. Pooja Kumari',
+    photo: PoojaImag,
+    position: 'Co-Founder',
+    email: 'pooja.ajftrust@gmail.com',
+    qualification: 'M.sc Extension Education and Communication Management'
   },
   {
-    name: 'Mike Johnson',
-    photo: ProfileImage,
-    position: 'Operations Director',
-    socialMedia: {
-      twitter: 'https://twitter.com/mikejohnson',
-      linkedin: 'https://linkedin.com/in/mikejohnson',
-      github: 'https://github.com/mikejohnson',
-    },
+    name: 'Mrs. Ankita Kumari',
+    photo: AnkitaImg,
+    position: 'Secretary',
+    email: 'ankita@ajftrust.org',
+    qualification: 'M.A Geography'
   },
   {
-    name: 'Sarah Williams',
-    photo: ProfileImage,
-    position: 'Community Manager',
-    socialMedia: {
-      twitter: 'https://twitter.com/sarahwilliams',
-      linkedin: 'https://linkedin.com/in/sarahwilliams',
-      github: 'https://github.com/sarahwilliams',
-    },
+    name: 'Mr. Ashish Kumar',
+    photo: Dummy,
+    position: 'Board of Member',
+    email: '',
+    qualification: ''
   },
+  {
+    name: 'Mr. Rakesh Kumar',
+    photo: Dummy,
+    position: 'Board of Trustee',
+    email: '',
+    qualification: 'M.A History'
+  }
 ];
 
 const TeamSection = () => {
@@ -60,9 +59,6 @@ const TeamSection = () => {
             to our mission.
           </p>
         </div>
-        {/* <div className={styles.imageSection}>
-          <img src={TeamImage} alt="Our Team" className={styles.teamImage} />
-        </div> */}
       </div>
 
       {/* Team Members Grid */}

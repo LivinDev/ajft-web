@@ -1,48 +1,93 @@
 .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 300px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px;
     margin: 0 auto;
+}
 
-    &:hover {
-        transform: translateY(-5px);
-    }
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
 }
 
 .photo {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 16px;
+    transition: transform 0.5s ease;
+    
+}
+
+.card:hover .photo {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 1.25rem;
+    background: #ffffff;
+    position: relative;
 }
 
 .name {
-    font-size: 1.5em;
-    margin: 8px 0;
-    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.4;
 }
 
 .position {
-    font-size: 1.2em;
-    color: #777;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
 }
 
-.socialMedia {
-    margin-top: 16px;
+.email {
+    font-size: 0.8rem;
+    color: #6366f1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    line-height: 1.4;
+}
 
-    a {
-        color: #1da1f2;
-        margin: 0 8px;
-        text-decoration: none;
-        transition: color 0.3s ease;
+.email:hover {
+    color: #4f46e5;
+}
 
-        &:hover {
-            color: #0d8ddb;
-        }
+@media (max-width: 768px) {
+    .card {
+        max-width: 260px;
+    }
+
+    .imageWrapper {
+        height: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        max-width: 240px;
+    }
+
+    .imageWrapper {
+        height: 160px;
+    }
+
+    .content {
+        padding: 1rem;
     }
 }
