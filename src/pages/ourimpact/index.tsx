@@ -3,6 +3,9 @@ import styles from './style.module.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const ImpactPage = () => {
+    useEffect(() => {
+    document.title = "Our Impact| Anand Jivan Foundation";
+  }, []);
   const [count, setCount] = useState(0);
   const targetCount = 98;
 

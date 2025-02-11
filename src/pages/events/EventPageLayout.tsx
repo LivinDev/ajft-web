@@ -37,7 +37,7 @@ const EventPageLayout = () => {
             </div>
           </div>
           <h1 className={styles.eventTitle}>{event.title}</h1>
-          <button className={styles.registerButton}>Register for Event</button>
+         
         </div>
       </header>
 

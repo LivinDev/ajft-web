@@ -6,6 +6,9 @@ import PoojaImag from "../../assets/images/pooja.jpeg"
 import AnkitaImg from "../../assets/images/ankitakumari.png"
 import Founder from "../../assets/images/founder.png"
 import Dummy from "../../assets/images/dummy-profile.jpeg"
+import { useEffect } from 'react';
+
+
 
 const leaderMember = {
   name: 'Mr. Guddu Kumar',
@@ -47,6 +50,9 @@ const coreTeamMembers = [
 ];
 
 const TeamSection = () => {
+    useEffect(() => {
+      document.title = "Team | Anand Jivan Foundation";
+    }, []);
   return (
     <div className={styles.teamContainer}>
       {/* Team Introduction */}

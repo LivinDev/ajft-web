@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './style.module.css';
 import FounderIMAGE from '../../assets/images/founder.png';
 
@@ -43,6 +43,9 @@ const AboutPage: React.FC = () => {
       content: "Through our initiatives, we've touched thousands of lives, creating sustainable change and building stronger communities across Bihar and beyond."
     }
   ];
+    useEffect(() => {
+      document.title = "About | Anand Jivan Foundation";
+    }, []);
 
   return (
     <div className={styles.pageWrapper}>

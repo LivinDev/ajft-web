@@ -74,7 +74,7 @@
 .footerSection {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: .5rem;
 }
 
 .org {
@@ -225,11 +225,32 @@
   color: white;
 }
 
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footerLogo {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.followText {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .innerfooter {
     grid-template-columns: repeat(2, 1fr);
   }
+     .footerLogo {
+       width: 70px;
+     }
 }
 
 @media (max-width: 768px) {
@@ -237,6 +258,13 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+    .logoWrapper {
+      justify-content: center;
+    }
+  
+    .footerLogo {
+      width: 60px;
+    }
 
   .subscribeForm {
     flex-direction: column;
@@ -261,7 +289,10 @@
   .copyrightContent {
     padding: 0 1rem;
   }
-
+.logoWrapper {
+  flex-direction: column;
+  text-align: center;
+}
   .org {
     font-size: 1.3rem;
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Building2, Users, Globe, IndianRupee, DollarSign, CreditCard } from 'lucide-react';
 import styles from './donatepage.module.css';
 
@@ -27,7 +27,9 @@ interface DonationMethod {
 
 const DonationPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('vocational');
-
+  useEffect(() => {
+    document.title = "Donate| Anand Jivan Foundation";
+  }, []);
   const tabContent: Record<string, TabContent> = {
     vocational: {
       title: "Donate for Vocational Skilling",

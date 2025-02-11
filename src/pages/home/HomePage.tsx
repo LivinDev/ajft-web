@@ -7,8 +7,12 @@ import TestimonialSlider from '../../sections/testimonial/Testimonial';
 import Services from '../../sections/services/Services';
 import EventSection from '../../sections/events/EventSection';
 import Volunteer from '../../sections/volunteer/Volunteer';
+import { useEffect } from 'react';
 
 const HomePage = () => {
+    useEffect(() => {
+      document.title = "Home| Anand Jivan Foundation";
+    }, []);
   return (
     <>
       <HeroSection />

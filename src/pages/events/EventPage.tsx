@@ -3,6 +3,7 @@ import styles from './eventstyle.module.css';
 import Image1 from '../../assets/images/bg-4.jpg';
 import { ngoEvents } from '../../sections/events/data';
 import EventCard from '../../components/ui/cards/EventCard';
+import { useEffect } from 'react';
 
 const EventPage = () => {
   const featuredEvent = {
@@ -12,7 +13,9 @@ const EventPage = () => {
     time: "8:30 AM IST",
     category: "Education"
   };
-
+  useEffect(() => {
+    document.title = "Events| Anand Jivan Foundation";
+  }, []);
   return (
     <div className={styles.container}>
       {/* Hero Section */}
@@ -38,7 +41,7 @@ const EventPage = () => {
               <span>{featuredEvent.time}</span>
             </div>
           </div>
-          <button className={styles.ctaButton}>Register Now</button>
+     
         </div>
       </header>
 

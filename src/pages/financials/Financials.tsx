@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './financials.module.css';
 
 const Financials = () => {
   const [activeTab, setActiveTab] = useState('accreditations');
-
+  useEffect(() => {
+    document.title = "Financials| Anand Jivan Foundation";
+  }, []);
   const renderAccreditations = () => (
     <ol className={styles.accreditationsList}>
       <li className={styles.accreditationItem}>

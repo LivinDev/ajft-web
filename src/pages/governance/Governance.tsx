@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './governance.module.css';
 import FounderImage from "../../assets/images/founder.png"
 import DummyImage from "../../assets/images/dummy-profile.jpeg"
@@ -87,6 +87,9 @@ const Governance = () => {
     }
   };
 
+    useEffect(() => {
+      document.title = "Governance | Anand Jivan Foundation";
+    }, []);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Governance</h1>

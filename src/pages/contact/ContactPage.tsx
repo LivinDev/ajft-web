@@ -3,7 +3,11 @@ import ContactForm from './ContactForm';
 import { FaHome, FaWhatsapp } from 'react-icons/fa';
 import { FaMapLocationDot } from 'react-icons/fa6';
 import { IoIosMail } from 'react-icons/io';
+import { useEffect } from 'react';
 const ContactPage = () => {
+    useEffect(() => {
+      document.title = "Contact | Anand Jivan Foundation";
+    }, []);
   return (
     <div className={Style.contactouter}>
       <div className={Style.contactinner}>

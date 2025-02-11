@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import {
   Captions,
@@ -34,7 +34,9 @@ const Certificate: React.FC<CertificatePageProps> = ({
   const closeLightbox = () => {
     setIndex(-1);
   };
-
+  useEffect(() => {
+    document.title = "Certificates | Anand Jivan Foundation";
+  }, []);
   return (
     <div className={styles.certificateContainer}>
       <div className={styles.headerSection}>

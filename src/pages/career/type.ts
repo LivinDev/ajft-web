@@ -21,190 +21,143 @@ export interface JobPosting {
 export const jobOpenings: JobPosting[] = [
   {
     id: '1',
-    title: 'Program Manager - Education Initiatives',
-    department: 'Programs',
+    title: 'Computer Operator',
+    department: 'Administration',
     location: 'Mumbai, Maharashtra',
     type: 'Full-time',
-    experience: '5-7 years',
-    salary: '8-12 LPA',
-    category: 'Programs',
+    experience: '1-3 years',
+    salary: '3-5 LPA',
+    category: 'Administration',
     postedDate: '2024-02-01',
     lastDate: '2024-03-15',
-    description: 'Lead our educational initiatives aimed at providing quality education to underprivileged children. The role involves program development, implementation, and impact assessment.',
+    description: 'Responsible for operating and maintaining computer systems, managing data entry, and providing technical support to staff members.',
     responsibilities: [
-      'Design and implement educational programs for underprivileged communities',
-      'Manage relationships with schools, teachers, and education partners',
-      'Develop curriculum and teaching methodologies',
-      'Monitor program effectiveness and prepare impact reports',
-      'Manage program budget and resource allocation',
-      'Train and mentor program staff',
-      'Collaborate with government education departments'
+      'Perform data entry and maintain database records',
+      'Handle basic computer troubleshooting',
+      'Generate and maintain reports',
+      'Assist with software installations and updates',
+      'Manage digital file organization',
+      'Provide basic IT support to staff',
+      'Maintain computer equipment inventory'
     ],
     requirements: [
-      'Master\'s degree in Education, Social Work, or related field',
-      'Minimum 5 years experience in education program management',
-      'Previous experience working with NGOs or educational institutions',
-      'Strong understanding of Indian education system',
-      'Experience in project management and team leadership',
-      'Excellent communication skills in English, Hindi, and Marathi'
+      'Diploma or Bachelor\'s degree in Computer Science or related field',
+      'Minimum 1 year experience as computer operator',
+      'Proficiency in MS Office Suite',
+      'Knowledge of basic computer hardware and software',
+      'Good typing speed and accuracy',
+      'Basic troubleshooting skills'
     ],
     skills: [
-      'Program Management',
-      'Stakeholder Management',
-      'Budget Management',
-      'Impact Assessment',
-      'Team Leadership',
-      'Grant Writing',
-      'MS Office Suite'
+      'Data Entry',
+      'MS Office Suite',
+      'Basic IT Support',
+      'Database Management',
+      'Hardware Troubleshooting',
+      'File Management',
+      'Technical Documentation'
     ],
     benefits: [
-      'Comprehensive health insurance',
-      'Professional development opportunities',
-      'Flexible working hours',
-      'Travel allowance',
+      'Health insurance',
+      'Fixed working hours',
       'Paid time off',
-      'Learning and development budget'
+      'Festival bonus',
+      'Training opportunities',
+      'Tea and snacks'
     ]
   },
   {
     id: '2',
-    title: 'Community Health Coordinator',
-    department: 'Healthcare',
-    location: 'Rural Maharashtra',
+    title: 'Driver',
+    department: 'Operations',
+    location: 'Mumbai, Maharashtra',
     type: 'Full-time',
     experience: '3-5 years',
-    salary: '5-7 LPA',
-    category: 'Healthcare',
+    salary: '2.5-3.5 LPA',
+    category: 'Operations',
     postedDate: '2024-02-05',
     lastDate: '2024-03-10',
-    description: 'Coordinate healthcare initiatives in rural communities, focusing on preventive healthcare and community wellness programs.',
+    description: 'Responsible for safely operating organization vehicles, transporting staff and materials, and maintaining vehicle documentation.',
     responsibilities: [
-      'Organize health camps and awareness programs',
-      'Coordinate with local healthcare providers and facilities',
-      'Manage community health worker teams',
-      'Implement health education programs',
-      'Monitor community health metrics',
-      'Maintain health records and prepare reports',
-      'Coordinate emergency health responses'
+      'Drive organization vehicles safely and responsibly',
+      'Transport staff members to various locations',
+      'Maintain vehicle logs and documentation',
+      'Ensure timely vehicle maintenance',
+      'Report any vehicle issues promptly',
+      'Assist with loading and unloading materials',
+      'Follow all traffic rules and safety guidelines'
     ],
     requirements: [
-      'Bachelor\'s degree in Public Health, Nursing, or related field',
-      'Experience in community health programs',
-      'Knowledge of rural healthcare systems',
-      'Strong coordination and leadership skills',
-      'Willingness to travel to remote locations',
-      'Proficiency in local languages'
+      'Valid commercial driving license',
+      'Minimum 3 years of professional driving experience',
+      'Clean driving record',
+      'Knowledge of local routes and traffic regulations',
+      'Basic vehicle maintenance knowledge',
+      'Ability to work flexible hours'
     ],
     skills: [
-      'Healthcare Management',
-      'Community Outreach',
-      'Team Coordination',
-      'Data Analysis',
-      'Report Writing',
-      'Emergency Response',
-      'Public Speaking'
+      'Safe Driving',
+      'Route Planning',
+      'Vehicle Maintenance',
+      'Time Management',
+      'Communication',
+      'Problem Solving',
+      'Documentation'
     ],
     benefits: [
       'Health insurance',
-      'Accommodation allowance',
-      'Vehicle allowance',
-      'Regular training programs',
-      'Performance bonuses',
-      'Wellness programs'
+      'Uniform allowance',
+      'Overtime pay',
+      'Annual bonus',
+      'Accident insurance',
+      'Mobile allowance'
     ]
   },
   {
     id: '3',
-    title: 'Fundraising Manager',
-    department: 'Fundraising',
+    title: 'Manager',
+    department: 'Operations',
     location: 'Mumbai, Maharashtra',
     type: 'Full-time',
-    experience: '7-10 years',
-    salary: '12-15 LPA',
-    category: 'Fundraising',
+    experience: '5-7 years',
+    salary: '8-12 LPA',
+    category: 'Operations',
     postedDate: '2024-02-03',
     lastDate: '2024-03-20',
-    description: 'Drive fundraising initiatives through corporate partnerships, grants, and donor relationships to support our community development programs.',
+    description: 'Oversee daily operations, manage staff, and ensure efficient execution of organizational objectives and projects.',
     responsibilities: [
-      'Develop and implement fundraising strategies',
-      'Build and maintain relationships with donors and corporate partners',
-      'Write grant proposals and manage grant reporting',
-      'Organize fundraising events and campaigns',
-      'Manage digital fundraising initiatives',
-      'Lead the fundraising team',
-      'Track and report on fundraising metrics'
+      'Manage and supervise department staff',
+      'Plan and coordinate operational activities',
+      'Develop and implement operational policies',
+      'Monitor and optimize department performance',
+      'Prepare and manage budgets',
+      'Handle resource allocation',
+      'Report to senior management'
     ],
     requirements: [
-      'Master\'s degree in Business, Communications, or related field',
-      'Proven track record in fundraising',
-      'Experience with grant writing and management',
-      'Strong network in corporate sector',
-      'Excellent presentation and negotiation skills',
-      'Knowledge of CRM systems'
+      'Bachelor\'s degree in Business Administration or related field',
+      'Minimum 5 years of management experience',
+      'Strong leadership and team management skills',
+      'Experience in budget management',
+      'Excellent communication and interpersonal skills',
+      'Problem-solving abilities'
     ],
     skills: [
-      'Fundraising Strategy',
-      'Relationship Management',
-      'Grant Writing',
-      'Event Management',
-      'Digital Marketing',
-      'Financial Planning',
-      'Leadership'
+      'Team Leadership',
+      'Operations Management',
+      'Budget Planning',
+      'Strategic Planning',
+      'Performance Management',
+      'Decision Making',
+      'Risk Management'
     ],
     benefits: [
-      'Performance-based incentives',
-      'Comprehensive insurance package',
+      'Comprehensive health insurance',
+      'Performance bonus',
       'Professional development budget',
-      'Flexible work arrangements',
-      'Travel opportunities',
-      'Mental health support'
-    ]
-  },
-  {
-    id: '4',
-    title: 'Volunteer Coordinator',
-    department: 'Operations',
-    location: 'Pune, Maharashtra',
-    type: 'Full-time',
-    experience: '2-4 years',
-    salary: '4-6 LPA',
-    category: 'Operations',
-    postedDate: '2024-02-07',
-    lastDate: '2024-03-25',
-    description: 'Manage volunteer programs and coordinate volunteer activities across various projects and initiatives.',
-    responsibilities: [
-      'Recruit and screen volunteers',
-      'Organize volunteer orientation and training programs',
-      'Match volunteers with appropriate projects',
-      'Maintain volunteer database',
-      'Coordinate volunteer schedules and activities',
-      'Create volunteer recognition programs',
-      'Evaluate volunteer program effectiveness'
-    ],
-    requirements: [
-      'Bachelor\'s degree in Human Resources or related field',
-      'Experience in volunteer management',
-      'Strong organizational and coordination skills',
-      'Experience with volunteer management software',
-      'Excellent interpersonal skills',
-      'Event management experience'
-    ],
-    skills: [
-      'Volunteer Management',
-      'Event Planning',
-      'Database Management',
-      'Training & Development',
-      'Communication',
-      'Problem Solving',
-      'MS Office'
-    ],
-    benefits: [
-      'Health insurance',
-      'Flexible scheduling',
-      'Professional development',
-      'Transportation allowance',
-      'Paid volunteering days',
-      'Team building events'
+      'Flexible working hours',
+      'Leave benefits',
+      'Mobile and laptop allowance'
     ]
   }
 ];

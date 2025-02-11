@@ -2,12 +2,13 @@
 import Style from './style.module.css';
 import StoryCard from '../../components/ui/cards/StoryCard';
 import { Heart } from 'lucide-react';
-import Button from '../../components/ui/Button';
+import EducationHelp from "../../assets/images/education-help.jpeg"
+import FoodHelp from "../../assets/images/food-help.jpeg"
 
 const storiesData = [
   {
     id: 1,
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: EducationHelp,
     title: "Transforming Lives Through Education",
     category: "Education",
     date: "Feb 2025",
@@ -15,7 +16,7 @@ const storiesData = [
   },
   {
     id: 2,
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: FoodHelp,
     title: "Building Sustainable Communities",
     category: "Community",
     date: "Jan 2025",
@@ -49,12 +50,7 @@ const Stories = () => {
               and transforming lives across the nation.
             </p>
           </div>
-          <Button 
-            text="View All Stories" 
-            variant="outline"
-            size="medium"
-            linkTo="/stories"
-          />
+         
         </div>
 
         <div className={Style.cardcontainer}>

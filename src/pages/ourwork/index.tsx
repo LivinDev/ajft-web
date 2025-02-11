@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './style.module.css';
 import EducationImage from '../../assets/images/eduaction-event.jpg';
 
 const OurAreaOfWork: React.FC = () => {
+    useEffect(() => {
+      document.title = "Our Work | Anand Jivan Foundation";
+    }, []);
   const areas = [
     {
       title: "Education",
