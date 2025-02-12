@@ -1,5 +1,4 @@
 import TeamCard from '../../components/ui/cards/TeamCard';
-import ProfileImage from '../../assets/images/founder.jpg';
 import Volunteer from '../../sections/volunteer/Volunteer';
 import styles from './style.module.css';
 import PoojaImag from "../../assets/images/pooja.jpeg"
