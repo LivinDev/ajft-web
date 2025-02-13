@@ -1,17 +1,17 @@
 // Services.tsx
-import { Link } from 'react-router-dom';
 import Style from './style.module.css';
-import Image1 from '../../assets/images/bg-1.jpg';
-import Image2 from '../../assets/images/bg-2.jpg';
-import Image3 from '../../assets/images/bg-3.jpg';
-import Image4 from '../../assets/images/bg-4.jpg';
+import Image1 from '../../assets/images/healthcare.jpg';
+import Image2 from '../../assets/images/women-em.jpg';
+
+import Image3 from '../../assets/images/education.jpg';
+import Image4 from '../../assets/images/society-welfare.jpg';
 
 interface ServiceItem {
   id: number;
   title: string;
   image: string;
   description: string;
-  link: string;
+  link?: string;
 }
 
 const services: ServiceItem[] = [
@@ -19,31 +19,26 @@ const services: ServiceItem[] = [
     id: 1,
     title: "Healthcare",
     image: Image1,
-    description: "Providing essential medical services to communities in need",
-    link: "/services/healthcare"
+    description: "Delivering comprehensive medical care, preventive services, and health education to underserved populations",
   },
   {
     id: 2,
-    title: "Education",
+    title: "Education Support",
     image: Image2,
-    description: "Empowering through quality education and skill development",
-    link: "/services/education"
+    description: "Facilitating access to quality education, learning resources, and vocational training programs",
   },
   {
     id: 3,
-    title: "Community Development",
+    title: "Women Empowerment",
     image: Image3,
-    description: "Building stronger, more resilient communities",
-    link: "/services/community"
+    description: "Promoting gender equality through skill development, economic opportunities, and leadership programs",
   },
   {
     id: 4,
-    title: "Child Welfare",
+    title: "Society Welfare",
     image: Image4,
-    description: "Supporting children's growth and development",
-    link: "/services/child-welfare"
+    description: "Creating positive social impact through community development initiatives and support programs",
   },
- 
 ];
 
 const Services = () => {
@@ -61,7 +56,7 @@ const Services = () => {
 
         <div className={Style.cardcontainer}>
           {services.map((service) => (
-            <Link to={service.link} className={Style.servicecard} key={service.id}>
+            <div className={Style.servicecard} key={service.id}>
               <div className={Style.imageWrapper}>
                 <img src={service.image} alt={service.title} />
               </div>
@@ -69,10 +64,10 @@ const Services = () => {
                 <div className={Style.content}>
                   <h3 className={Style.servicename}>{service.title}</h3>
                   <p className={Style.servicedesc}>{service.description}</p>
-                  <span className={Style.learnMore}>Learn More</span>
+                 
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

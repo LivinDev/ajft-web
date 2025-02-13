@@ -39,13 +39,7 @@ const coreTeamMembers = [
     email: '',
     qualification: ''
   },
-  {
-    name: 'Mr. Rakesh Kumar',
-    photo: Dummy,
-    position: 'Board of Trustee',
-    email: '',
-    qualification: 'M.A History'
-  }
+ 
 ];
 
 const TeamSection = () => {

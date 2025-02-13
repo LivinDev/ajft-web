@@ -36,7 +36,9 @@ const Governance = () => {
   const renderTrusteesSection = () => (
     <div className={styles.trusteesGrid}>
       {[
-        { name: 'Mr. Rakesh Kumar ', role: 'Board of Trustee' },
+        { name: 'Mr. Guddu Kumar ', role: 'Founder & Chairman' },
+        { name: 'Mrs. Pooja Kumari', role: 'Co-Founder' },
+        { name: 'Mrs. Ankita Kumari', role: 'Secretary' },
        
       ].map((trustee, index) => (
         <div key={index} className={styles.trusteeCard}>

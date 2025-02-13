@@ -24,3 +24,12 @@ li {
     font-family: 'Inter', sans-serif;
     font-size: var(--primary-text-color);
 }
+
+@font-face {
+    font-family: 'BauhausStd-Medium';
+    src: url('../font/BauhausStd-Medium.woff2') format('woff2'),
+        url('../font/BauhausStd-Medium.woff') format('woff'),
+        url('../font/BauhausStd-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
