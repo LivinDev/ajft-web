@@ -42,10 +42,7 @@ const navItems: MenuItem[] = [
   { 
     title: 'EVENTS',
     href: '/events',
-    subItems: [
-      { title: 'Success Stories', href: '/impact/stories' },
-      { title: 'Statistics', href: '/impact/stats' }
-    ]
+   
   },
   { 
     title: 'GET INVOLVED',

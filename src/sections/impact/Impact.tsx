@@ -14,28 +14,28 @@ interface ImpactData {
 const impactData: ImpactData[] = [
   {
     id: 1,
-    number: 3698,
+    number: 100,
     heading: "Early Intervention Services",
     description: "Medically rehabilitated children with special needs",
     icon: <Heart className="impact-icon" />
   },
   {
     id: 2,
-    number: 2547,
+    number: 18,
     heading: "Community Outreach",
     description: "Families supported through our programs",
     icon: <Users className="impact-icon" />
   },
   {
     id: 3,
-    number: 1892,
+    number: 500,
     heading: "Educational Support",
     description: "Children provided with quality education",
     icon: <Award className="impact-icon" />
   },
   {
     id: 4,
-    number: 4523,
+    number: 300,
     heading: "Healthcare Initiatives",
     description: "Medical consultations provided",
     icon: <TrendingUp className="impact-icon" />
