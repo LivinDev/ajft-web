@@ -5,8 +5,9 @@ import styles from "./style.module.css";
 import SplitSection from "../splitsection/SplitDesign";
 import Image1 from "../../assets/images/hero-1-bg.jpg";
 import FounderImage from "../../assets/images/founder.png";
-import Image3 from "../../assets/images/health-care-hr.jpg"
-import Image2 from "../../assets/images/women-emp.jpg"
+import Image3 from "../../assets/images/health-care-hr.jpg";
+import Image2 from "../../assets/images/wom-emb.jpeg";
+import Image4 from "../../assets/images/edu-hom.jpeg";
 // Don't forget to import Swiper styles in your main component or App.js
 // import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -50,9 +51,7 @@ const HeroSection = () => {
 
         <SwiperSlide>
           <div className={styles.slide}>
-            <div
-              className={`${styles.slideContent} ${styles.slideContent2}`}
-            >
+            <div className={`${styles.slideContent} ${styles.slideContent2}`}>
               <SplitSection
                 subtitle="WOMEN EMPOWERMENT"
                 mainTitle="EMPOWERED WOMEN, POWERFUL WORLD."
@@ -68,9 +67,7 @@ const HeroSection = () => {
 
         <SwiperSlide>
           <div className={styles.slide}>
-            <div
-              className={`${styles.slideContent} ${styles.slideContent3}`}
-            >
+            <div className={`${styles.slideContent} ${styles.slideContent3}`}>
               <SplitSection
                 subtitle="HEALTH CARE"
                 mainTitle="HEALTH FIRST, LIFE BEST"
@@ -83,8 +80,21 @@ const HeroSection = () => {
             </div>
           </div>
         </SwiperSlide>
-
-      
+        <SwiperSlide>
+          <div className={styles.slide}>
+            <div className={`${styles.slideContent} ${styles.slideContent3}`}>
+              <SplitSection
+                subtitle="EDUCATIONAL Support"
+                mainTitle="LEARNING FIRST, FUTURE BEST"
+                paragraph="Education is the foundation for a brighter future, ensuring access to quality learning, skill development, and knowledge growth. It empowers individuals, enhances critical thinking, and paves the way for success."
+                leftBackgroundImage={Image4}
+                rightPersonImage={FounderImage}
+                rightTitle="Let's Build a Smarter Tomorrow"
+                className="custom-section" // optional
+              />
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </section>
   );
