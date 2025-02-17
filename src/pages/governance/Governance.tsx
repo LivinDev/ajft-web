@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import styles from './governance.module.css';
 import FounderImage from "../../assets/images/founder.png"
 import DummyImage from "../../assets/images/dummy-profile.jpeg"
+import Pooja from "../../assets/images/pooja.jpeg"
+import Ankita from "../../assets/images/ankitakumari.jpeg"
 const Governance = () => {
   const [activeTab, setActiveTab] = useState('mentor');
 
@@ -36,15 +38,15 @@ const Governance = () => {
   const renderTrusteesSection = () => (
     <div className={styles.trusteesGrid}>
       {[
-        { name: 'Mr. Guddu Kumar ', role: 'Founder & Chairman' },
-        { name: 'Mrs. Pooja Kumari', role: 'Co-Founder' },
-        { name: 'Mrs. Ankita Kumari', role: 'Secretary' },
+        { name: 'Mr. Guddu Kumar ', role: 'Founder & Chairman' , imageLink:FounderImage },
+        { name: 'Mrs. Pooja Kumari', role: 'Co-Founder' ,imageLink:Pooja },
+        { name: 'Mrs. Ankita Kumari', role: 'Secretary',imageLink:Ankita },
        
       ].map((trustee, index) => (
         <div key={index} className={styles.trusteeCard}>
           <div className={styles.trusteeInfo}>
             <img 
-              src={DummyImage}
+              src={trustee.imageLink}
               alt={trustee.name}
               className={styles.trusteeImage}
             />

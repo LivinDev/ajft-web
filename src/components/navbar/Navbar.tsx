@@ -25,7 +25,6 @@ const navItems: MenuItem[] = [
       { title: 'About us', href: '/aboutus' },
       { title: 'Governance', href: '/governance' },
       { title: 'Financials', href: '/financials' },
-      { title: 'About us', href: '/aboutus' },
       { title: 'Our Team', href: '/team' },
       { title: 'Certificates', href: '/certificates' },
       { title: 'Gallery', href: '/gallery' },
