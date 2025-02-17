@@ -288,6 +288,8 @@
     border: none;
     display: flex;
     gap:1rem;
+    text-decoration: none;
+    width: fit-content;
     border-radius: 8px;
     font-size: 1.125rem;
     font-weight: 600;

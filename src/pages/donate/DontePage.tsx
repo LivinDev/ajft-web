@@ -92,10 +92,10 @@ const DonationPage: React.FC = () => {
       {/* Main Title */}
       <h1 className={styles.mainTitle}>Donate to Empower Persons with Disability</h1>
        <div className={styles.donationButtons}>
-        <button className={styles.indianDonation}>
+        <a href='https://rzp.io/rzp/Ezbifwa'  target='_blank' className={styles.indianDonation}>
           <IndianRupee size={20} />
           FOR INDIAN DONATION
-        </button>
+        </a>
         {/* <button className={styles.foreignDonation}>
           <DollarSign size={20} />
           FOR FOREIGN DONATION
@@ -192,10 +192,10 @@ const DonationPage: React.FC = () => {
             <h2>Campaign</h2>
             <h3>Support Special needs of 100 children</h3>
             <p>Help Children with Special Needs to take expensive therapies and make their future lively</p>
-            <button className={styles.donateButton}>
+            <a href='https://rzp.io/rzp/GVtvOCd2' target='_blanck' className={styles.donateButton}>
               <CreditCard size={20} className={styles.buttonIcon} />
               DONATE NOW
-            </button>
+            </a>
           </div>
           <div className={styles.campaignImage}>
             <img 
