@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './governance.module.css';
 import FounderImage from "../../assets/images/founder.png"
-import DummyImage from "../../assets/images/dummy-profile.jpeg"
 import Pooja from "../../assets/images/pooja.jpeg"
 import Ankita from "../../assets/images/ankitakumari.jpeg"
 const Governance = () => {
