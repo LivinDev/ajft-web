@@ -1,5 +1,4 @@
 // Footer.tsx
-import { Link } from 'react-router-dom';
 import Style from './style.module.css';
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import Logo from "../../assets/images/ajftlogo.png"
@@ -7,11 +6,9 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const quickLinks = [
-    { title: 'About Us', path: '/about' },
-    { title: 'About CEO', path: '/ceo' },
-    { title: 'Careers', path: '/careers' },
+    { title: 'About Us', path: '/aboutus' },
+    { title: 'Careers', path: '/career' },
     { title: 'Contact Us', path: '/contact' },
-    { title: 'FAQs', path: '/faqs' },
     { title: 'Donate Now', path: '/donate' }
   ];
 
@@ -31,9 +28,9 @@ const Footer = () => {
               Empowering communities through sustainable development, education,
             
             </p>
-            <Link to="/donate" className={Style.donateButton}>
+            <a href="/donate" className={Style.donateButton}>
               Support Our Cause
-            </Link>
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -43,7 +40,7 @@ const Footer = () => {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <ArrowRight size={14} />
-                  <Link to={link.path}>{link.title}</Link>
+                  <a href={link.path}>{link.title}</a>
                 </li>
               ))}
             </ul>
@@ -91,9 +88,8 @@ const Footer = () => {
         <div className={Style.copyrightContent}>
           <p>© {year} Anand Jivan Foundation Trust. All Rights Reserved.</p>
           <div className={Style.copyrightLinks}>
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Use</Link>
-            <Link to="/sitemap">Sitemap</Link>
+            <a href="/privacy-policy">Privacy Policy</a>
+          
           </div>
         </div>
       </div>

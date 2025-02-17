@@ -22,6 +22,7 @@ import PageNotFound from '../pages/404/PageNotFound';
 import Governance from '../pages/governance/Governance';
 import Financials from '../pages/financials/Financials';
 import CareerPage from '../pages/career/CarrerPage';
+import PrivacyPolicy from '../pages/privacy/Privacy';
 
 interface HomeRouteProps {
   isAuthenticated: boolean;
@@ -166,6 +167,14 @@ const HomeRoute: React.FC<HomeRouteProps> = ({ isAuthenticated }) => {
         element={
           <PublicLayout>
             <OurAreaOfWork />
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/privacy-policy"
+        element={
+          <PublicLayout>
+            <PrivacyPolicy />
           </PublicLayout>
         }
       />

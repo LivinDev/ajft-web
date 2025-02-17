@@ -5,6 +5,8 @@ import styles from "./style.module.css";
 import SplitSection from "../splitsection/SplitDesign";
 import Image1 from "../../assets/images/hero-1-bg.jpg";
 import FounderImage from "../../assets/images/founder.png";
+import Image3 from "../../assets/images/health-care-hr.jpg"
+import Image2 from "../../assets/images/women-emp.jpg"
 // Don't forget to import Swiper styles in your main component or App.js
 // import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -52,10 +54,10 @@ const HeroSection = () => {
               className={`${styles.slideContent} ${styles.slideContent2}`}
             >
               <SplitSection
-                subtitle="GO GREEN"
-                mainTitle="SAVE TREES, SAVE LIFES"
-                paragraph="The urgency of environmental conservation cannot be overstated. As the global population continues to grow, the strain on natural resources intensifies, leading to significant environmental challenges."
-                leftBackgroundImage={Image1}
+                subtitle="WOMEN EMPOWERMENT"
+                mainTitle="EMPOWERED WOMEN, POWERFUL WORLD."
+                paragraph="Women empowerment is about giving women the freedom, confidence, and opportunities to make their own choices. It promotes education, leadership, and gender equality, enabling women to break barriers and achieve success. "
+                leftBackgroundImage={Image2}
                 rightPersonImage={FounderImage}
                 rightTitle="Let's Make Better Life"
                 className="custom-section" // optional
@@ -70,10 +72,10 @@ const HeroSection = () => {
               className={`${styles.slideContent} ${styles.slideContent3}`}
             >
               <SplitSection
-                subtitle="GO GREEN"
-                mainTitle="SAVE TREES, SAVE LIFES"
-                paragraph="The urgency of environmental conservation cannot be overstated. As the global population continues to grow, the strain on natural resources intensifies, leading to significant environmental challenges."
-                leftBackgroundImage={Image1}
+                subtitle="HEALTH CARE"
+                mainTitle="HEALTH FIRST, LIFE BEST"
+                paragraph="Health care is essential for a quality life, ensuring access to medical treatment, preventive care, and well-being support. It focuses on physical, mental, and emotional health, providing necessary care for all. "
+                leftBackgroundImage={Image3}
                 rightPersonImage={FounderImage}
                 rightTitle="Let's Make Better Life"
                 className="custom-section" // optional
@@ -82,21 +84,7 @@ const HeroSection = () => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <div className={styles.slide}>
-            <div className={`${styles.slideContent} ${styles.slideContent4}`}>
-              <SplitSection
-                subtitle="GO GREEN"
-                mainTitle="SAVE TREES, SAVE LIFES"
-                paragraph="The urgency of environmental conservation cannot be overstated. As the global population continues to grow, the strain on natural resources intensifies, leading to significant environmental challenges."
-                leftBackgroundImage={Image1}
-                rightPersonImage={FounderImage}
-                rightTitle="Let's Make Better Life"
-                className="custom-section" // optional
-              />
-            </div>
-          </div>
-        </SwiperSlide>
+      
       </Swiper>
     </section>
   );

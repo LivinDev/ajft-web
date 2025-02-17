@@ -7,17 +7,17 @@ const Volunteer = () => {
   const impactStats = [
     {
       icon: <Users className={Style.icon} />,
-      count: '1000+',
+      count: '50+',
       label: 'Active Volunteers'
     },
     {
       icon: <Heart className={Style.icon} />,
-      count: '50+',
+      count: '5+',
       label: 'Communities Served'
     },
     {
       icon: <HandHeart className={Style.icon} />,
-      count: '100+',
+      count: '10+',
       label: 'Ongoing Projects'
     }
   ];
@@ -55,12 +55,7 @@ const Volunteer = () => {
 
           <div className={Style.ctaSection}>
             <Button text="Become a Volunteer" size="large" linkTo="/volunteer" />
-            <Button 
-              text="Learn More" 
-              size="large" 
-              linkTo="/about-volunteering" 
-              outline={true} 
-            />
+           
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 // EventSection.tsx
 import Style from './style.module.css';
 import EventCard from '../../components/ui/cards/EventCard';
-import { ngoEvents } from './data';
 import { Calendar, ArrowRight } from 'lucide-react';
 import Button from '../../components/ui/Button';
+import { ngoEvents } from './data';
 
 const getFirstThreeEvents = (events: any) => {
   return events.slice(0, 3);

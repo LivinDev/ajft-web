@@ -13,26 +13,30 @@ interface JobPosting {
   location: string;
   type: 'Full-time' | 'Part-time' | 'Contract' | 'Volunteer';
   experience: string;
-  salary?: string;
   description: string;
   responsibilities: string[];
   requirements: string[];
-  skills: string[];
-  benefits: string[];
   postedDate: string;
   lastDate: string;
   category: 'Programs' | 'Administration' | 'Fundraising' | 'Operations' | 'Healthcare' | 'Education';
 }
 
+// Updated to match backend schema
 interface ApplicationFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  experience: string;
-  resume: File | null;
-  coverLetter: string;
-  referral: string;
+  role: {
+    title: string;
+  };
+  personalInfo: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    mobile: string;
+    address: string;
+  };
+  professionalInfo: {
+    experience: number;
+    noticePeriod: string;
+  };
 }
 
 const departments = [
@@ -56,6 +60,10 @@ const CareerPage: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
   const [selectedJob, setSelectedJob] = useState<JobPosting | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   useEffect(() => {
     document.title = "Career | Anand Jivan Foundation";
@@ -73,9 +81,40 @@ const CareerPage: React.FC = () => {
     });
   }, [searchTerm, selectedDepartment, selectedType]);
 
-  const handleSubmit = (formData: ApplicationFormData) => {
-    console.log('Form submitted:', formData);
-    setSelectedJob(null);
+  const handleSubmit = async (formData: ApplicationFormData) => {
+    try {
+      const response = await fetch('http://localhost:3000/api/jobs/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Application submission failed');
+      }
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Application submitted successfully! We will contact you soon.',
+      });
+
+      // Close modal after successful submission
+      setTimeout(() => {
+        setSelectedJob(null);
+        setSubmitStatus({ type: null, message: '' });
+      }, 3000);
+
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Failed to submit application',
+      });
+    }
   };
 
   const renderSearchSection = () => (
@@ -141,12 +180,6 @@ const CareerPage: React.FC = () => {
 
       <p className={styles.jobDescription}>{job.description}</p>
 
-      <div className={styles.skillTags}>
-        {job.skills.slice(0, 3).map((skill, index) => (
-          <span key={index} className={styles.skillTag}>{skill}</span>
-        ))}
-      </div>
-
       <div className={styles.jobFooter}>
         <div className={styles.dates}>
           <span>Posted: {format(new Date(job.postedDate), 'MMM dd, yyyy')}</span>
@@ -185,9 +218,19 @@ const CareerPage: React.FC = () => {
       {selectedJob && (
         <ApplicationModal
           job={selectedJob}
-          onClose={() => setSelectedJob(null)}
+          onClose={() => {
+            setSelectedJob(null);
+            setSubmitStatus({ type: null, message: '' });
+          }}
           onSubmit={handleSubmit}
         />
+      )}
+
+      {/* Status Messages */}
+      {submitStatus.type && (
+        <div className={`${styles.statusMessage} ${styles[submitStatus.type]}`}>
+          {submitStatus.message}
+        </div>
       )}
     </div>
   );

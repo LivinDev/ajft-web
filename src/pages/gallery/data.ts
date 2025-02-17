@@ -1,52 +1,136 @@
+import Image1 from "../../assets/gallery/gallery-1.jpeg"
+import Image2 from "../../assets/gallery/gallery-2.jpeg"
+import Image3 from "../../assets/gallery/gallery-3.jpeg"
+import Image4 from "../../assets/gallery/gallery-4.jpeg"
+import Image5 from "../../assets/gallery/gallery-5.jpeg"
+import Image6 from "../../assets/gallery/gallery-6.jpeg"
+import Image7 from "../../assets/gallery/gallery-7.jpeg"
+import Image8 from "../../assets/gallery/gallery-8.jpeg"
+import Image9 from "../../assets/gallery/gallery-9.jpeg"
+import Image10 from "../../assets/gallery/gallery-10.jpeg"
+import Image11 from "../../assets/gallery/gallery-11.jpeg"
+import Image12 from "../../assets/gallery/gallery-12.jpeg"
+import Image13 from "../../assets/gallery/gallery-13.jpeg"
+import Image14 from "../../assets/gallery/gallery-14.jpeg"
+import Image15 from "../../assets/gallery/gallery-15.jpeg"
+import Image16 from "../../assets/gallery/gallery-16.jpeg"
+import Image17 from "../../assets/gallery/gallery-17.jpeg"
+import Image18 from "../../assets/gallery/gallery-18.jpeg"
+import Image19 from "../../assets/gallery/gallery-19.jpeg"
+import Image20 from "../../assets/gallery/gallery-20.jpeg"
+import Image21 from "../../assets/gallery/gallery-21.jpeg"
+import Image22 from "../../assets/gallery/gallery-22.jpeg"
+import Image23 from "../../assets/gallery/gallery-23.jpeg"
+import Image24 from "../../assets/gallery/gallery-24.jpeg"
+import Image25 from "../../assets/gallery/gallery-25.jpeg"
+import Image26 from "../../assets/gallery/gallery-26.jpeg"
+import Image27 from "../../assets/gallery/gallery-27.jpeg"
+import Image28 from "../../assets/gallery/gallery-28.jpeg"
+import Image29 from "../../assets/gallery/gallery-29.jpeg"
+import Image30 from "../../assets/gallery/gallery-30.jpeg"
+import Image31 from "../../assets/gallery/gallery-31.jpeg"
+import Image32 from "../../assets/gallery/gallery-32.jpeg"
+import Image33 from "../../assets/gallery/gallery-33.jpeg"
+
+
 export const slides = [
   {
-    src: 'https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title One',
-    // description: 'Slide Description One\n\nthis is new line',
+    src: Image1,
   },
   {
-    src: 'https://images.unsplash.com/photo-1682686581551-867e0b208bd1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Two',
-    // description: 'Slide Description Two',
+    src: Image2,
   },
   {
-    src: 'https://images.unsplash.com/photo-1682695797221-8164ff1fafc9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Three',
-    // description: 'Slide Description Three',
+    src: Image3,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700744228339-03c725f5ee57?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Four',
-    // description: 'Slide Description Four',
+    src: Image4,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700839154423-83ea2246621b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Five',
-    // description: 'Slide Description Five',
+    src: Image5,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700770845346-7e95de335eb0?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Six',
-    // description: 'Slide Description Six',
+    src: Image6,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700751639138-e6628c42b558?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Seven',
-    // description: 'Slide Description Seven',
+    src: Image7,
   },
   {
-    src: 'https://plus.unsplash.com/premium_photo-1698442704192-086265cf630e?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Eight',
-    // description: 'Slide Description Eight',
+    src: Image8,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700753227268-8832c285591e?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Nine',
-    // description: 'Slide Description Nine',
+    src: Image9,
   },
   {
-    src: 'https://images.unsplash.com/photo-1700769025506-6c3dcb9ec9b7?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Slide Title Ten',
-    // description: 'Slide Description Ten',
+    src: Image10,
   },
-]
+  {
+    src: Image11,
+  },
+  {
+    src: Image12,
+  },
+  {
+    src: Image13,
+  },
+  {
+    src: Image14,
+  },
+  {
+    src: Image15,
+  },
+  {
+    src: Image16,
+  },
+  {
+    src: Image17,
+  },
+  {
+    src: Image18,
+  },
+  {
+    src: Image19,
+  },
+  {
+    src: Image20,
+  },
+  {
+    src: Image21,
+  },
+  {
+    src: Image22,
+  },
+  {
+    src: Image23,
+  },
+  {
+    src: Image24,
+  },
+  {
+    src: Image25,
+  },
+  {
+    src: Image26,
+  },
+  {
+    src: Image27,
+  },
+  {
+    src: Image28,
+  },
+  {
+    src: Image29,
+  },
+  {
+    src: Image30,
+  },
+  {
+    src: Image31,
+  },
+  {
+    src: Image32,
+  },
+  {
+    src: Image33,
+  },
+];

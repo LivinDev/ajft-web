@@ -22,7 +22,7 @@ function Gallery() {
   return (
     <>
       {/* <button onClick={() => setOpen(true)}>Open Lightbox</button> */}
-
+<div style={{maxWidth:"1330px", margin:"0 auto"}}>
       <Images
         data={slides}
         onClick={(currentIndex) => setIndex(currentIndex)}
@@ -42,7 +42,9 @@ function Gallery() {
         close={() => setIndex(-1)}
         slides={slides}
       />
+      </div>
     </>
+    
   );
 }
 

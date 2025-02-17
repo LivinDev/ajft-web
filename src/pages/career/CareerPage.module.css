@@ -355,3 +355,103 @@
         grid-template-columns: 1fr;
     }
 }
+
+.formSection {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formSection:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Updated Form Group Styles */
+.formGroup textarea {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.formGroup input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.formGroup input[type="number"]::-webkit-outer-spin-button,
+.formGroup input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Error States */
+.formGroup input:invalid,
+.formGroup textarea:invalid {
+    border-color: #e53e3e;
+}
+
+.formGroup input:invalid:focus,
+.formGroup textarea:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Status Message Styles */
+.statusMessage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1100;
+}
+
+.success {
+    background-color: #48bb78;
+    color: white;
+}
+
+.error {
+    background-color: #f56565;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Search Input Wrapper */
+.searchInputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a5568;
+}
+
+.searchInput {
+    padding-left: 3rem;
+}

@@ -4,7 +4,7 @@ import styles from './style.module.css';
 import PoojaImag from "../../assets/images/pooja.jpeg"
 import AnkitaImg from "../../assets/images/ankitakumari.png"
 import Founder from "../../assets/images/founder.png"
-import Dummy from "../../assets/images/dummy-profile.jpeg"
+import AshishImage from "../../assets/images/ashish-kumar.jpeg"
 import { useEffect } from 'react';
 
 
@@ -34,7 +34,7 @@ const coreTeamMembers = [
   },
   {
     name: 'Mr. Ashish Kumar',
-    photo: Dummy,
+    photo: AshishImage,
     position: 'Board of Member',
     email: '',
     qualification: ''

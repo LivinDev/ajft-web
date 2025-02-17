@@ -1,6 +1,5 @@
 // StoryCard.tsx
 import styles from '../../../styles/ui/storyCard.module.css';
-import { ArrowRight } from 'lucide-react';
 
 interface StoryCardProps {
   imageUrl: string;
@@ -29,10 +28,10 @@ const StoryCard: React.FC<StoryCardProps> = ({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
         
-        <button className={styles.readMore}>
+        {/* <button className={styles.readMore}>
           <span>Read Full Story</span>
           <ArrowRight size={16} className={styles.arrow} />
-        </button>
+        </button> */}
       </div>
     </div>
   );

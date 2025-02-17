@@ -4,6 +4,7 @@ import StoryCard from '../../components/ui/cards/StoryCard';
 import { Heart } from 'lucide-react';
 import EducationHelp from "../../assets/images/education-help.jpeg"
 import FoodHelp from "../../assets/images/food-help.jpeg"
+import Image3 from "../../assets/images/youth-leader.png"
 
 const storiesData = [
   {
@@ -24,7 +25,7 @@ const storiesData = [
   },
   {
     id: 3,
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: Image3,
     title: "Empowering Youth Leaders",
     category: "Youth",
     date: "Mar 2025",
