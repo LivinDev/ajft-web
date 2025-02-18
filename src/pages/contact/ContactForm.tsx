@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://ajft.ap-south-1.elasticbeanstalk.com/api/contact/submit', {
+      const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
