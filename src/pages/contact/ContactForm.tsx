@@ -42,27 +42,19 @@ const onSubmit = async (data: FormSchema) => {
   setIsSubmitting(true);
 
   try {
-    const response = await axios.post(
+    await axios.post(
       'http://ajft.ap-south-1.elasticbeanstalk.com/api/contact/submit',
       {
         name: data.name,
         email: data.email,
         mobile: data.number,
         message: data.message,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        // Remove withCredentials since we're not using credentials
       }
     );
 
-    if (response.status === 200) {
-      setNotificationType('success');
-      setShowNotification(true);
-      reset();
-    }
+    setNotificationType('success');
+    setShowNotification(true);
+    reset();
   } catch (error) {
     console.error('Form submission error:', error);
     setNotificationType('error');
