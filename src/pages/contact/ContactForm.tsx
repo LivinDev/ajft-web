@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import styles from './style.module.css';
 import StyledNotification from '../../components/ui/Popup';
-
+import axios from 'axios';
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   number: z
@@ -38,38 +38,44 @@ const ContactForm: React.FC = () => {
     resolver: zodResolver(formSchema),
   });
 
-    const onSubmit = async (data: FormSchema) => {
-    setIsSubmitting(true);
+   const onSubmit = async (data: FormSchema) => {
+  setIsSubmitting(true);
 
-    try {
-      const response = await fetch('/api/contact/submit', {
-        method: 'POST',
+  try {
+    const response = await axios.post(
+      'http://ajft.ap-south-1.elasticbeanstalk.com/api/contact/submit',
+      {
+        name: data.name,
+        email: data.email,
+        mobile: data.number,
+        message: data.message,
+      },
+      {
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Origin': 'https://ajftrust.org'  // Add this
         },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          mobile: data.number,
-          message: data.message,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
+        withCredentials: false,  // Change to false unless you specifically need credentials
       }
+    );
 
+    if (response.status === 200) {  // Add status check
       setNotificationType('success');
       setShowNotification(true);
       reset();
-      
-    } catch (error) {
-      setNotificationType('error');
-      setShowNotification(true);
-    } finally {
-      setIsSubmitting(false);
+    } else {
+      throw new Error('Submission failed');
     }
-  };
+    
+  } catch (error) {
+    console.error('Form submission error:', error);
+    setNotificationType('error');
+    setShowNotification(true);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
 
   return (
