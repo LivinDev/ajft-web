@@ -43,7 +43,7 @@ const onSubmit = async (data: FormSchema) => {
 
   try {
     await axios.post(
-      '/.netlify/functions/proxy-api/api/contact/submit',
+      '/.netlify/proxy-api/api/contact/submit',
       {
         name: data.name,
         email: data.email,
