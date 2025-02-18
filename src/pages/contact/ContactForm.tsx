@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
     resolver: zodResolver(formSchema),
   });
 
-   const onSubmit = async (data: FormSchema) => {
+const onSubmit = async (data: FormSchema) => {
   setIsSubmitting(true);
 
   try {
@@ -53,21 +53,16 @@ const ContactForm: React.FC = () => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'Origin': 'https://ajftrust.org'  // Add this
         },
-        withCredentials: false,  // Change to false unless you specifically need credentials
+        // Remove withCredentials since we're not using credentials
       }
     );
 
-    if (response.status === 200) {  // Add status check
+    if (response.status === 200) {
       setNotificationType('success');
       setShowNotification(true);
       reset();
-    } else {
-      throw new Error('Submission failed');
     }
-    
   } catch (error) {
     console.error('Form submission error:', error);
     setNotificationType('error');
@@ -76,7 +71,6 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(false);
   }
 };
-
 
   return (
     <div className={styles.formWrapper}>
