@@ -60,7 +60,7 @@ const VolunteerForm: React.FC = () => {
   const onSubmit = async (data: FormSchema) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:3000/api/volunteer/submit', {
+      const response = await fetch('http://ajft.ap-south-1.elasticbeanstalk.com/api/volunteer/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

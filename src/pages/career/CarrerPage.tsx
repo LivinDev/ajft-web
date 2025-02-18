@@ -83,7 +83,7 @@ const CareerPage: React.FC = () => {
 
   const handleSubmit = async (formData: ApplicationFormData) => {
     try {
-      const response = await fetch('http://localhost:3000/api/jobs/apply', {
+      const response = await fetch('http://ajft.ap-south-1.elasticbeanstalk.com/api/jobs/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

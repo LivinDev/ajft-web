@@ -116,6 +116,37 @@
     transform: translateX(4px);
 }
 
+
+
+
+.cardActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.donateLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #e94057;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.donateLink:hover {
+    color: #c81e3e;
+}
+
+.heartIcon {
+    transition: transform 0.3s ease;
+}
+
+.donateLink:hover .heartIcon {
+    transform: scale(1.2);
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .card {

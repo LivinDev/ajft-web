@@ -1,13 +1,14 @@
 // EventCard.tsx
 import { Link } from 'react-router-dom';
 import Style from '../../../styles/ui/eventCard.module.css';
-import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight, Heart } from 'lucide-react';
 
 interface EventCardProps {
   heading: string;
   image: string;
   description: string;
   linkTo: string;
+  donateLinkTo?: string;
   date?: string;
   location?: string;
 }
@@ -17,6 +18,7 @@ const EventCard: React.FC<EventCardProps> = ({
   image,
   description,
   linkTo,
+  donateLinkTo = '/donate',
   date = 'Upcoming',
   location = 'To be announced',
 }) => {
@@ -42,10 +44,17 @@ const EventCard: React.FC<EventCardProps> = ({
         <h2 className={Style.cardTitle}>{heading}</h2>
         <p className={Style.cardDescription}>{description}</p>
         
-        <Link to={linkTo} className={Style.cardLink}>
-          <span>Learn More</span>
-          <ArrowRight size={16} className={Style.arrowIcon} />
-        </Link>
+        <div className={Style.cardActions}>
+          <Link to={linkTo} className={Style.cardLink}>
+            <span>Learn More</span>
+            <ArrowRight size={16} className={Style.arrowIcon} />
+          </Link>
+          <Link to={donateLinkTo} className={Style.donateLink}>
+           <Heart size={16} className={Style.heartIcon} fill="currentColor" />
+            <span style={{color:"blue",fontWeight:'bold'}}>Donate</span>
+           
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -31,11 +31,12 @@ const ImpactPage = () => {
   ];
 
   const growthData = [
-    { name: '2019', beneficiaries: 2000 },
-    { name: '2020', beneficiaries: 4500 },
-    { name: '2021', beneficiaries: 6800 },
-    { name: '2022', beneficiaries: 8500 },
-    { name: '2023', beneficiaries: 10000 }
+
+ 
+    { name: '2022', beneficiaries: 300 },
+    { name: '2023', beneficiaries: 750 },
+    { name: '2024', beneficiaries: 1000 },
+    { name: '2025', beneficiaries: 1349 },
   ];
 
   const successStories = [
@@ -147,7 +148,7 @@ const ImpactPage = () => {
           <p className={styles.ctaText}>
             Join us in making a difference. Together, we can create positive change.
           </p>
-          <button className={styles.ctaButton}>Get Involved</button>
+          <a href='/volunteer' className={styles.ctaButton}>Get Involved</a>
         </div>
       </section>
     </div>

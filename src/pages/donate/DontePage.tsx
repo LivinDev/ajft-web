@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Building2, Users, Globe, IndianRupee, CreditCard } from 'lucide-react';
 import styles from './donatepage.module.css';
 import Donate from "../../assets/images/donate.jpg"
-import Needy from "../../assets/images/kid-refugee-camp.jpg"
+import Needy from "../../assets/gallery/gallery-22.jpeg"
 interface TabContent {
   title: string;
   items: string[];
@@ -68,12 +68,13 @@ const DonationPage: React.FC = () => {
 
   const bankDetails = {
     indian: {
-      accountName: "ANAND JIVAN FOUNFATION TRUST",
-      accountNumber: "50200082194362",
-      accountType: "Current Account",
-      bankName: "HDFC",
-      branch: "SHIVDHARA DARBHANGA",
-      ifscCode: "HDFC0005160",
+      AccountName: "ANAND JIVAN FOUNFATION TRUST",
+      AccountNumber: "50200082194362",
+      AccountType: "Current Account",
+      BankName: "HDFC",
+      Branch: "SHIVDHARA DARBHANGA",
+      IfscCode: "HDFC0005160",
+      SwiftCode:"HDFCINBB"
    
     },
     foreign: {

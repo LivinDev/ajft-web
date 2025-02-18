@@ -15,22 +15,22 @@ export interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'John Doe',
-    role: 'Community Member',
+    name: 'Mr. Vinay Kumar',
+    role: 'Electric Worker ',
     quote:
       'Through their dedication and compassion, this organization has transformed countless lives in our community. Their commitment to sustainable development and social empowerment is truly inspiring.',
   },
   {
     id: 2,
-    name: 'Jane Smith',
+    name: ' Mr. Sathyam',
     role: 'Volunteer',
     quote:
       'Working with this NGO has been an incredible journey. Their grassroots approach to community development and focus on education has created lasting positive change in our society.',
   },
   {
     id: 3,
-    name: 'Alice Johnson',
-    role: 'Beneficiary',
+    name: 'Mr. Rahul Kumar',
+    role: 'Carpenter Worker',
     quote:
       'The support and guidance I received from this organization changed my life. Their holistic approach to community welfare and dedication to empowering individuals is remarkable.',
   },

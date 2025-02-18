@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
               <div className={Style.contactItem}>
                 <Mail size={18} />
-                <a href="mailto:info@ajftrust.org">info@ajftrust.org</a>
+                <a href="mailto:info@ajftrust.org">ajftrusts@gmail.com</a>
               </div>
               <div className={Style.contactItem}>
                 <Phone size={18} />

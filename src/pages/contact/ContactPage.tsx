@@ -1,13 +1,13 @@
-import Style from './style.module.css';
-import ContactForm from './ContactForm';
-import { FaHome, FaWhatsapp } from 'react-icons/fa';
-import { FaMapLocationDot } from 'react-icons/fa6';
-import { IoIosMail } from 'react-icons/io';
-import { useEffect } from 'react';
+import Style from "./style.module.css";
+import ContactForm from "./ContactForm";
+import { FaHome, FaWhatsapp } from "react-icons/fa";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { useEffect } from "react";
 const ContactPage = () => {
-    useEffect(() => {
-      document.title = "Contact | Anand Jivan Foundation";
-    }, []);
+  useEffect(() => {
+    document.title = "Contact | Anand Jivan Foundation";
+  }, []);
   return (
     <div className={Style.contactouter}>
       <div className={Style.contactinner}>
@@ -47,7 +47,7 @@ const ContactPage = () => {
             </div>
             <div className={Style.contactdetails}>
               <h1>Email</h1>
-              <p>info@ajftrust.org</p>
+              <p>ajftrusts@gmail.com</p>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const ContactPage = () => {
       </div>
       <div className={Style.map}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1020711456717!2d77.64628197792966!3d12.901157754939469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15376b8c95cf%3A0xcb4c1526029a60d3!2sHustlehub%20Tech%20Park!5e0!3m2!1sen!2sin!4v1719681563984!5m2!1sen!2sin"
+         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54589.926294447396!2d85.894058!3d26.207499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edb7a602a9ae31%3A0x4e6a6245083be13d!2sBelauna%2C%20Bihar%20847306!5e1!3m2!1sen!2sin!4v1739851067053!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -66,6 +66,8 @@ const ContactPage = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+
+     
     </div>
   );
 };

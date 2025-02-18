@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import styles from './style.module.css';
 import EducationImage from '../../assets/images/eduaction-event.jpg';
+import womemb from "../../assets/images/wom-emb.jpeg"
+import Tree from "../../assets/images/go-green.png"
 
 const OurAreaOfWork: React.FC = () => {
     useEffect(() => {
@@ -26,18 +28,18 @@ const OurAreaOfWork: React.FC = () => {
         opportunities and are respected and valued. Through targeted
         initiatives and community support, we're helping women build
         confidence, develop skills, and achieve their aspirations.`,
-      image: EducationImage,
+      image: womemb,
       reversed: true,
     },
-    {
-      title: "Healthcare",
-      description: `Our healthcare initiatives aim to provide accessible and
-        affordable healthcare services to communities in need. We believe
-        that good health is essential for a productive and fulfilling
-        life. Through mobile clinics, health camps, and awareness
-        programs, we're working to ensure that quality healthcare reaches
+  {
+      title: "Community Service",
+      description: `Our community service initiatives aim to provide accessible and
+        valuable support to neighborhoods in need. We believe
+        that strong communities are essential for a productive and fulfilling
+        life. Through volunteer programs, local improvement projects, and awareness
+        campaigns, we're working to ensure that quality assistance reaches
         every corner of our community.`,
-      image: EducationImage,
+      image: Tree,
       reversed: false,
     },
   ];
