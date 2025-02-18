@@ -43,7 +43,7 @@ const onSubmit = async (data: FormSchema) => {
 
   try {
     await axios.post(
-      'http://ajft.ap-south-1.elasticbeanstalk.com/api/contact/submit',
+      'https://api.ajftrust.org/api/contact/submit',
       {
         name: data.name,
         email: data.email,

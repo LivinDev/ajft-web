@@ -4,7 +4,7 @@ import StoryCard from '../../components/ui/cards/StoryCard';
 import { Heart } from 'lucide-react';
 import EducationHelp from "../../assets/images/education-help.jpeg"
 import FoodHelp from "../../assets/images/food-help.jpeg"
-import Image3 from "../../assets/images/youth-leader.png"
+import Image3 from "../../assets/images/youth-leaders.jpeg"
 
 const storiesData = [
   {
