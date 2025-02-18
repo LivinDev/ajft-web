@@ -43,12 +43,17 @@ const onSubmit = async (data: FormSchema) => {
 
   try {
     await axios.post(
-      'https://api.ajftrust.org/api/contact/submit',
+      '/.netlify/functions/proxy-api/api/contact/submit',
       {
         name: data.name,
         email: data.email,
         mobile: data.number,
         message: data.message,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        }
       }
     );
 
