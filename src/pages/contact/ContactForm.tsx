@@ -42,20 +42,20 @@ const onSubmit = async (data: FormSchema) => {
   setIsSubmitting(true);
 
   try {
-    await axios.post(
-      '/.netlify/functions/proxy-api/api/contact/submit',
-      {
-        name: data.name,
-        email: data.email,
-        mobile: data.number,
-        message: data.message,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      }
-    );
+   await axios.post(
+  'https://z9byv6q96f.execute-api.ap-south-1.amazonaws.com/prod/api/contact/submit',
+  {
+    name: data.name,
+    email: data.email,
+    mobile: data.number,
+    message: data.message,
+  },
+  {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }
+);
 
     setNotificationType('success');
     setShowNotification(true);
