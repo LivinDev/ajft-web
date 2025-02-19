@@ -43,7 +43,7 @@ const onSubmit = async (data: FormSchema) => {
 
   try {
    await axios.post(
-  'https://z9byv6q96f.execute-api.ap-south-1.amazonaws.com/prod/api/contact/submit',
+  'https://z9byv6q96f.execute-api.ap-south-1.amazonaws.com/api/contact/submit',
   {
     name: data.name,
     email: data.email,
