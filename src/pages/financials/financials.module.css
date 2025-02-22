@@ -63,6 +63,84 @@
     color: #4a1d96;
 }
 
+/* Financial Reports Section Styles */
+.reportsSection {
+    padding: 10px 0;
+    max-width: 500px;
+}
+
+.reportsTitle {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: #4a1d96;
+}
+
+.reportCards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reportCard {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reportCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reportIconContainer {
+    width: 50px;
+    height: 50px;
+    background: #f0e6ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.pdfIcon {
+    font-size: 24px;
+}
+
+.reportInfo {
+    flex-grow: 1;
+}
+
+.reportName {
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    color: #333;
+}
+
+.reportPeriod {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.viewButton {
+    background: #4a1d96;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.viewButton:hover {
+    background: #5c2eba;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .container {
@@ -76,5 +154,26 @@
 
     .contentSection {
         padding: 20px;
+    }
+
+    .reportCard {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .reportIconContainer {
+        margin: 0 auto 12px auto;
+    }
+
+    .reportInfo {
+        margin-bottom: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .viewButton {
+        width: 100%;
+        text-align: center;
     }
 }

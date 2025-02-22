@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import styles from './financials.module.css';
-
+import PDF from "../../assets/pdf/ajftrust-blancesheet.pdf"
 const Financials = () => {
   const [activeTab, setActiveTab] = useState('accreditations');
   useEffect(() => {
-    document.title = "Financials| Anand Jivan Foundation";
+    document.title = "Financials | Anand Jivan Foundation";
   }, []);
+  
   const renderAccreditations = () => (
     <ol className={styles.accreditationsList}>
       <li className={styles.accreditationItem}>
@@ -25,8 +26,32 @@ const Financials = () => {
 
   const renderFinancialReports = () => (
     <div className={styles.reportsSection}>
-      {/* Add your financial reports content here */}
-      <p>Financial reports section content will go here.</p>
+      <h2 className={styles.reportsTitle}>Annual Financial Reports</h2>
+      
+      <div className={styles.reportCards}>
+       
+        
+        {/* Additional report cards can be added here */}
+        <div className={styles.reportCard}>
+          <div className={styles.reportIconContainer}>
+            <i className={styles.pdfIcon}>📄</i>
+          </div>
+          <div className={styles.reportInfo}>
+            <h3 className={styles.reportName}>Income & Expenditure Statement</h3>
+            <p className={styles.reportPeriod}>FY 2024-2025</p>
+          </div>
+          <a 
+            href={PDF}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.viewButton}
+          >
+            View PDF
+          </a>
+        </div>
+        
+     
+      </div>
     </div>
   );
 
