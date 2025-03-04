@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './governance.module.css';
 import FounderImage from "../../assets/images/founder.png"
 import Pooja from "../../assets/images/pooja.jpeg"
-import Ankita from "../../assets/images/ankitakumari.jpeg"
+import Ankita from "../../assets/images/ankitakumari.png"
 const Governance = () => {
   const [activeTab, setActiveTab] = useState('mentor');
 

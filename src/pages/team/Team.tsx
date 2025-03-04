@@ -29,7 +29,7 @@ const coreTeamMembers = [
     name: 'Mrs. Ankita Kumari',
     photo: AnkitaImg,
     position: 'Secretary',
-    email: 'ankita@ajftrust.org',
+    email: 'ankita.ajftrust@gmail.com ',
     qualification: 'M.A Geography'
   },
   {
