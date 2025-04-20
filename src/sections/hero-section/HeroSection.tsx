@@ -4,7 +4,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import styles from "./style.module.css";
 import SplitSection from "../splitsection/SplitDesign";
 import Image1 from "../../assets/images/hero-1-bg.jpg";
-import FounderImage from "../../assets/images/founder.png";
+import FounderImage from "../../assets/images/foundermain.jpeg";
 import Image3 from "../../assets/images/health-care-hr.jpg";
 import Image2 from "../../assets/images/wom-emb.jpeg";
 import Image4 from "../../assets/images/edu-hom.jpeg";
