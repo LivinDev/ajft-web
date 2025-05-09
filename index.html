@@ -20,5 +20,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- LiteChat Widget -->
+    <script>
+      (function (d, t) {
+        var s = d.createElement('script');
+        s.src = 'https://cdn.litechat.io/public/widget.js?token=' + t;
+        s.defer = true;
+        s.dataset.autoInit = 'true';
+        d.body.appendChild(s);
+      })(document, '960c1c70e09af4a27783a8122378f78a');
+    </script>
+    <!-- LiteChat Widget -->
   </body>
 </html>
