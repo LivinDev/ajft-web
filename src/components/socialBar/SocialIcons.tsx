@@ -7,7 +7,7 @@ const SocialIcons = () => {
     { icon: Facebook, bgColor: '#3b5998', url: 'https://www.facebook.com/ajftrust' },
     { icon: Twitter, bgColor: '#1DA1F2', url: 'https://x.com/ajmsfoundation' },
     { icon: Linkedin, bgColor: '#0077b5', url: 'https://www.linkedin.com/company/anand-jivan-foundation/' },
-    { icon: Instagram, bgColor: '#e4405f', url: 'https://www.instagram.com/anandjivanfoundation/' }
+    { icon: Instagram, bgColor: '#e4405f', url: 'https://www.instagram.com/ajftrusts/' }
   ];
 
   return (
